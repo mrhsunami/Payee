@@ -8,13 +8,11 @@
 
 import UIKit
 
-//protocol AddItemProtocol {
-//  var itemName : String { get set }
-//  var payerName : String { get set }
-//  var amount : Float { get set }
-//}
-
-class AddItemViewController: UIViewController {
+class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: AnyObject) {
+    print(buddyAmountPortion)
+  }
+  
   
   @IBOutlet weak var nextButton: UIButton!
   @IBOutlet weak var amountTextField: UITextField!

@@ -270,6 +270,12 @@
                     <navigationItem key="navigationItem" title="Item Details" id="e01-IU-xvz"/>
                     <connections>
                         <outlet property="amountLabel" destination="jmM-pg-3AY" id="Hfj-Cr-VcA"/>
+                        <outlet property="buddy1AmountPortionTextField" destination="NkR-Nj-Z2g" id="hOl-YB-cbq"/>
+                        <outlet property="buddy1NameTextField" destination="57L-3e-6jo" id="Txz-9m-UWA"/>
+                        <outlet property="buddy2AmountPortionTextField" destination="SXo-Z7-Cxy" id="Nrn-qe-Mib"/>
+                        <outlet property="buddy2NameTextField" destination="3au-BU-iqg" id="jgE-h4-Kj5"/>
+                        <outlet property="buddy3AmountPortionTextField" destination="gff-K4-Pto" id="7xR-oe-SQd"/>
+                        <outlet property="buddy3NameTextField" destination="4F8-KB-acH" id="ZWN-bt-Bgh"/>
                         <outlet property="doneButton" destination="XEr-LI-qGf" id="PBD-JU-ged"/>
                         <outlet property="itemNameLabel" destination="ob5-fI-cak" id="liE-XP-twF"/>
                         <outlet property="payerLabel" destination="oUm-eY-9b8" id="h5V-zW-nas"/>
