@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* TransactionRecord.m */; };
-		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
+
+		2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */; };
+		2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */; };
+		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
+		2CE88B842050FF7C004CC735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE88B7F2050FF7C004CC735 /* Main.storyboard */; };
+		2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */; };
+		95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* Transaction.m */; };
+		95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* MemberRecord.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
 		D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCF2050BDC400486D7C /* ViewController.swift */; };
@@ -19,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		2CE88B7F2050FF7C004CC735 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
 		95B427D62050C67100BAC5F4 /* TransactionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionRecord.h; sourceTree = "<group>"; };
 		95B427D72050C67100BAC5F4 /* TransactionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionRecord.m; sourceTree = "<group>"; };
@@ -66,8 +77,13 @@
 		D8C20FCC2050BDC400486D7C /* Payee */ = {
 			isa = PBXGroup;
 			children = (
+				2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */,
 				D8C20FD12050BDC400486D7C /* Main.storyboard */,
 				D8C20FCD2050BDC400486D7C /* AppDelegate.swift */,
+				2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */,
+				2CE88B7F2050FF7C004CC735 /* Main.storyboard */,
+				2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */,
+				2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */,
 				D8C20FCF2050BDC400486D7C /* ViewController.swift */,
 				95B427DB2050C67200BAC5F4 /* Buddy.h */,
 				95B427D92050C67200BAC5F4 /* Buddy.m */,
@@ -147,6 +163,7 @@
 				D8C20FD82050BDC400486D7C /* LaunchScreen.storyboard in Resources */,
 				D8C20FD52050BDC400486D7C /* Assets.xcassets in Resources */,
 				D8C20FD32050BDC400486D7C /* Main.storyboard in Resources */,
+				2CE88B842050FF7C004CC735 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */,
-				95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */,
+				2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */,
+				2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */,
+				95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */,
+				95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */,
+				2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */,
 				D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */,
+				2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */,
 				95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */,
 				D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */,
 				D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */,
