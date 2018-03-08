@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* Transaction.m */; };
+		95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* MemberRecord.m */; };
+		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
 		D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCF2050BDC400486D7C /* ViewController.swift */; };
 		D8C20FD32050BDC400486D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD12050BDC400486D7C /* Main.storyboard */; };
@@ -15,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
+		95B427D62050C67100BAC5F4 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		95B427D72050C67100BAC5F4 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		95B427D82050C67200BAC5F4 /* MemberRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberRecord.m; sourceTree = "<group>"; };
+		95B427D92050C67200BAC5F4 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
+		95B427DA2050C67200BAC5F4 /* MemberRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberRecord.h; sourceTree = "<group>"; };
+		95B427DB2050C67200BAC5F4 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
 		D8C20FCA2050BDC400486D7C /* Payee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C20FCD2050BDC400486D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C20FCF2050BDC400486D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,12 +64,19 @@
 		D8C20FCC2050BDC400486D7C /* Payee */ = {
 			isa = PBXGroup;
 			children = (
+				D8C20FD12050BDC400486D7C /* Main.storyboard */,
 				D8C20FCD2050BDC400486D7C /* AppDelegate.swift */,
 				D8C20FCF2050BDC400486D7C /* ViewController.swift */,
-				D8C20FD12050BDC400486D7C /* Main.storyboard */,
+				95B427DB2050C67200BAC5F4 /* Buddy.h */,
+				95B427D92050C67200BAC5F4 /* Buddy.m */,
+				95B427DA2050C67200BAC5F4 /* MemberRecord.h */,
+				95B427D82050C67200BAC5F4 /* MemberRecord.m */,
+				95B427D62050C67100BAC5F4 /* Transaction.h */,
+				95B427D72050C67100BAC5F4 /* Transaction.m */,
 				D8C20FD42050BDC400486D7C /* Assets.xcassets */,
 				D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */,
 				D8C20FD92050BDC400486D7C /* Info.plist */,
+				95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */,
 			);
 			path = Payee;
 			sourceTree = "<group>";
@@ -96,6 +113,7 @@
 				TargetAttributes = {
 					D8C20FC92050BDC400486D7C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */,
+				95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */,
+				95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */,
 				D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */,
 				D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */,
 			);
@@ -274,12 +295,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34PVCRW63B;
 				INFOPLIST_FILE = Payee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Payee/Payee-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +313,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34PVCRW63B;
 				INFOPLIST_FILE = Payee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Payee/Payee-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
