@@ -11,12 +11,14 @@
 
 @interface MemberRecord : NSObject
 
-@property (nonatomic) Buddy *buddy;
+@property (nonatomic) Buddy* buddy;
 @property (nonatomic) float tabAmountCAD;
 @property (nonatomic) float paidAmountCAD;
 
 -(instancetype)initWithBuddy: (Buddy*)buddy
                 tabAmountCAD: (float)tabAmountCAD
             andPaidAmountCAD: (float)paidAmountCAD;
+
+-(instancetype)initWithBuddy: (Buddy*)buddy;
 
 @end

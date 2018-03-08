@@ -20,5 +20,10 @@
   return self;
 }
 
+-(instancetype)init
+{
+  self = [self initWithBuddyName:@"Defaulty D. McDefaultyton"];
+  return self;
+}
 
 @end

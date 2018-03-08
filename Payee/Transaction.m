@@ -24,4 +24,6 @@
   return self;
 }
 
+/*must update initializers to take in any and all required info from the Task Manager object (which is the sole communicator with the UI)*/
+
 @end

@@ -14,7 +14,6 @@
 
 @property (nonatomic) NSString *transactionName;
 @property (nonatomic) NSDate  *transactionDate;
-//should I type the following array?  If so I believe we'll need a protocol.
 @property (nonatomic) NSArray *memberRecords;
 
 // some future stuff:

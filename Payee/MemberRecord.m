@@ -10,6 +10,7 @@
 
 @implementation MemberRecord
 
+//MARK: initializer methods and overrides
 -(instancetype)initWithBuddy: (Buddy*)buddy
                 tabAmountCAD: (float)tabAmountCAD
             andPaidAmountCAD: (float)paidAmountCAD
@@ -21,6 +22,19 @@
     _tabAmountCAD = tabAmountCAD;
     _paidAmountCAD = paidAmountCAD;
   }
+  return self;
+}
+
+-(instancetype)initWithBuddy: (Buddy*)buddy
+{
+  self = [self initWithBuddy:buddy tabAmountCAD:0.00 andPaidAmountCAD:0.00];
+  return self;
+}
+
+-(instancetype)init
+{
+  Buddy *noBuddy = [[Buddy alloc]init];
+  self = [self initWithBuddy:noBuddy tabAmountCAD:0.00 andPaidAmountCAD:0.00];
   return self;
 }
 
