@@ -11,6 +11,14 @@
 @property (nonatomic) float tabAmountCAD;
 @property (nonatomic) float paidAmountCAD;
 
++(instancetype)returnSumOfEvents:(BuddyTransactionEvent*)event1
+                             and:(BuddyTransactionEvent*)event2;
+
++(instancetype)returnSumOfEventsArray:(NSArray<BuddyTransactionEvent*>*)array
+                             forBuddy:(Buddy*)buddy;
+
++(instancetype)returnSumOfEventsArray:(NSArray<BuddyTransactionEvent*>*)array;
+
 -(instancetype)initWithBuddy: (Buddy*)buddy
                 tabAmountCAD: (float)tabAmountCAD
             andPaidAmountCAD: (float)paidAmountCAD;

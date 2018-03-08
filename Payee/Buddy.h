@@ -10,4 +10,6 @@
 
 -(instancetype)initWithBuddyName: (NSString*)buddyName;
 
+-(instancetype)initVirtualSummingBuddy;
+
 @end

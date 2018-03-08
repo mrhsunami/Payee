@@ -6,6 +6,63 @@
 
 @implementation BuddyTransactionEvent
 
++(instancetype)returnSumOfEvents:(BuddyTransactionEvent*)event1
+                             and:(BuddyTransactionEvent*)event2
+{
+  Buddy* virtualSummingBuddy = [[Buddy alloc]initVirtualSummingBuddy];
+  BuddyTransactionEvent *summedEvent = [[BuddyTransactionEvent alloc]initWithBuddy:virtualSummingBuddy
+                                                                       tabAmountCAD:0.0
+                                                                   andPaidAmountCAD:0.0];
+  summedEvent.tabAmountCAD = event1.tabAmountCAD + event2.tabAmountCAD;
+  summedEvent.paidAmountCAD = event1.paidAmountCAD + event2.paidAmountCAD;
+  return summedEvent;
+}
+
++(instancetype)returnSumOfEventsArray:(NSArray<BuddyTransactionEvent*>*)array
+                             forBuddy:(Buddy*)buddy
+{
+  BuddyTransactionEvent* virtualSummingEvent = [[self alloc]initWithBuddy:buddy tabAmountCAD:0.0 andPaidAmountCAD:0.0];
+  for (BuddyTransactionEvent* event in array)
+  {
+    //this probably needs to be a "is equal to" method, not '=='
+    if (event.buddy == buddy)
+    {
+      [self returnSumOfEvents:virtualSummingEvent and:event];
+    }
+      
+  }
+  return virtualSummingEvent;
+}
+
++(instancetype)returnSumOfEventsArray:(NSArray<BuddyTransactionEvent*>*)array
+{
+  Buddy* virtualSummingBuddy = [[Buddy alloc]initVirtualSummingBuddy];
+  BuddyTransactionEvent* virtualSummingEvent = [[BuddyTransactionEvent alloc]initNetZeroWithBuddy:virtualSummingBuddy];
+  for (BuddyTransactionEvent* event in array)
+  {
+    virtualSummingEvent = [self returnSumOfEvents:event and:virtualSummingEvent];
+  }
+  return virtualSummingEvent;
+}
+
+
++(NSArray<BuddyTransactionEvent*>*)returnSumOfEventsInArray:(NSArray<BuddyTransactionEvent*>*)events
+{
+  NSMutableSet* buddySet = [[NSMutableSet alloc]init];
+  NSMutableArray* eventArray = [[NSMutableArray alloc]init];
+  
+  for (BuddyTransactionEvent* event in events)
+  {
+    [buddySet addObject:event.buddy];
+  }
+  for (Buddy* buddy in buddySet)
+  {
+    BuddyTransactionEvent* summingEvent = [self returnSumOfEventsArray:events forBuddy:buddy];
+    [eventArray addObject:summingEvent];
+  }
+  return eventArray;
+}
+
 //MARK: Convenience Methods
 
 //Adds the value properties of the object in the selector to the value properties of the receiver

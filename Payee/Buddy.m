@@ -23,4 +23,10 @@
   return self;
 }
 
+-(instancetype)initVirtualSummingBuddy
+{
+  self = [self initWithBuddyName:@"VirtualSummingBuddy"];
+  return self;
+}
+
 @end
