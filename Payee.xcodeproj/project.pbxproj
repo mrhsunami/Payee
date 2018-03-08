@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* Transaction.m */; };
-		95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* MemberRecord.m */; };
+		95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* TransactionRecord.m */; };
+		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
 		D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCF2050BDC400486D7C /* ViewController.swift */; };
@@ -20,11 +20,11 @@
 
 /* Begin PBXFileReference section */
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
-		95B427D62050C67100BAC5F4 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
-		95B427D72050C67100BAC5F4 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		95B427D82050C67200BAC5F4 /* MemberRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberRecord.m; sourceTree = "<group>"; };
+		95B427D62050C67100BAC5F4 /* TransactionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionRecord.h; sourceTree = "<group>"; };
+		95B427D72050C67100BAC5F4 /* TransactionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionRecord.m; sourceTree = "<group>"; };
+		95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyTransactionEvent.m; sourceTree = "<group>"; };
 		95B427D92050C67200BAC5F4 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
-		95B427DA2050C67200BAC5F4 /* MemberRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberRecord.h; sourceTree = "<group>"; };
+		95B427DA2050C67200BAC5F4 /* BuddyTransactionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyTransactionEvent.h; sourceTree = "<group>"; };
 		95B427DB2050C67200BAC5F4 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
 		D8C20FCA2050BDC400486D7C /* Payee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C20FCD2050BDC400486D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,10 +71,10 @@
 				D8C20FCF2050BDC400486D7C /* ViewController.swift */,
 				95B427DB2050C67200BAC5F4 /* Buddy.h */,
 				95B427D92050C67200BAC5F4 /* Buddy.m */,
-				95B427DA2050C67200BAC5F4 /* MemberRecord.h */,
-				95B427D82050C67200BAC5F4 /* MemberRecord.m */,
-				95B427D62050C67100BAC5F4 /* Transaction.h */,
-				95B427D72050C67100BAC5F4 /* Transaction.m */,
+				95B427DA2050C67200BAC5F4 /* BuddyTransactionEvent.h */,
+				95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */,
+				95B427D62050C67100BAC5F4 /* TransactionRecord.h */,
+				95B427D72050C67100BAC5F4 /* TransactionRecord.m */,
 				D8C20FD42050BDC400486D7C /* Assets.xcassets */,
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
 				D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */,
@@ -157,8 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B427DD2050C67300BAC5F4 /* MemberRecord.m in Sources */,
-				95B427DC2050C67300BAC5F4 /* Transaction.m in Sources */,
+				95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */,
+				95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */,
 				D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */,
 				95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */,
 				D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */,
