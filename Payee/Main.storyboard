@@ -14,7 +14,7 @@
         <!--Add Item-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="AddItemViewController" customModule="MidTerm" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="AddItemViewController" customModule="Payee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +93,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="S7j-G1-A7j"/>
                     <connections>
-                        <outlet property="amountTextField" destination="FPB-nY-Eo4" id="js0-HD-YWW"/>
-                        <outlet property="itemNameTextField" destination="Eyf-au-8tn" id="1RV-e8-oxE"/>
-                        <outlet property="nextButton" destination="BSu-d6-2iN" id="Hoz-rS-utS"/>
-                        <outlet property="payerTextField" destination="Z49-fO-cUD" id="rui-Jf-TiJ"/>
+                        <outlet property="amountTextField" destination="FPB-nY-Eo4" id="uhl-1C-q7x"/>
+                        <outlet property="itemNameTextField" destination="Eyf-au-8tn" id="PC4-Nd-yqZ"/>
+                        <outlet property="nextButton" destination="BSu-d6-2iN" id="ivu-K2-wYS"/>
+                        <outlet property="payerTextField" destination="Z49-fO-cUD" id="ZOU-bB-vyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -200,7 +200,6 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonTouched:" destination="5YH-By-2Qz" eventType="touchUpInside" id="XdQ-qX-ZKu"/>
-                                    <action selector="nextButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="NCy-iN-2Br"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-eY-9b8">
@@ -270,10 +269,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Item Details" id="e01-IU-xvz"/>
                     <connections>
-                        <outlet property="amountTextField" destination="jmM-pg-3AY" id="hYN-XA-QDE"/>
+                        <outlet property="amountLabel" destination="jmM-pg-3AY" id="Hfj-Cr-VcA"/>
                         <outlet property="doneButton" destination="XEr-LI-qGf" id="PBD-JU-ged"/>
-                        <outlet property="itemNameTextField" destination="ob5-fI-cak" id="lRP-jO-9ph"/>
-                        <outlet property="payerTextField" destination="oUm-eY-9b8" id="2iR-s2-Hnj"/>
+                        <outlet property="itemNameLabel" destination="ob5-fI-cak" id="liE-XP-twF"/>
+                        <outlet property="payerLabel" destination="oUm-eY-9b8" id="h5V-zW-nas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDd-aZ-Ena" userLabel="First Responder" sceneMemberID="firstResponder"/>
