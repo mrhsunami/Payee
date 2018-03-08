@@ -11,9 +11,13 @@ import UIKit
 class ItemDetailViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var doneButton: UIButton!
-  @IBOutlet weak var amountTextField: UILabel!
-  @IBOutlet weak var payerTextField: UILabel!
-  @IBOutlet weak var itemNameTextField: UILabel!
+  @IBOutlet weak var itemNameLabel: UILabel!
+  @IBOutlet weak var payerLabel: UILabel!
+  @IBOutlet weak var amountLabel: UILabel!
+  
+  var itemName = ""
+  var payer = ""
+  var amount = ""
   
   @IBAction func doneButtonTouched(_ sender: Any) {
     print("done button tapped")
@@ -25,7 +29,10 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
   
   override func viewDidLoad() {
         super.viewDidLoad()
-    
+    itemNameLabel?.text = itemName
+    payerLabel?.text = payer
+    amountLabel?.text = amount
+
 //    doneButton.isEnabled = false
 
         // Do any additional setup after loading the view.
@@ -36,7 +43,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+  
     /*
     // MARK: - Navigation
 
