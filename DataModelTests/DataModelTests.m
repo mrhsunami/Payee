@@ -33,6 +33,8 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+  
+  //Tests
   self.buddy1 = [[Buddy alloc]initWithBuddyName:@"Chris"];
   self.buddy2 = [[Buddy alloc]initWithBuddyName:@"Nathan"];
   self.buddy3 = [[Buddy alloc]initWithBuddyName:@"Kevin"];
@@ -41,10 +43,7 @@
   [self.buddyArray addObject:self.buddy1];
   [self.buddyArray addObject:self.buddy2];
   [self.buddyArray addObject:self.buddy3];
-  
-  
-  
-}
+  }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
@@ -86,7 +85,6 @@
   //Test the class function for adding an array of buddyTransactionEvents filtered by buddy
   XCTAssert(array3buddy2Total.tabAmountCAD == 100);
   XCTAssert(array3buddy2Total.paidAmountCAD == 0);
-  
   
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
