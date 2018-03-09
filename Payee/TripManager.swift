@@ -8,23 +8,54 @@
 
 import Foundation
 
-class tripManager {
+class TripManager {
     
     // var array of Buddy
+    var allBuddies: [Buddy] = []
+    
     // var array of Transactions.
+    var allTransactions: [TransactionRecord] = []
+    
     
     // func touchUpInsideFromDoneButtonPressed {...
-    /* when the user hits done:
-     1. The first time the app runs, new Buddy class instances would need to be created. Their names would come from the view's textField.text for however many view cells are there.
-     2. Create an array to hold Buddy class so next time it will check if a Buddy exists.
-     3. Now an array of Buddy objects exist.
-     
-     Now that an array of Buddy objects exist, we can create MemberRecord Objects(taking in aBuddy, Buddy's tabAmount, Buddy's paidAmount)
-     
-     For each MemberRecord, put it in an array. And call Transaction Class init method that takes the array of MemberRecords, along with context info (Name, Description, Date etc). It will return itself, an instance of the Transaction Class.
-     
-     Take that Transaction Object and put it in to the Transactions array.
-     */
+    func callMeFromDoneButton(arrayOfNewBuddyNamesFromTextFieldtext buddyNamesAndPortions: [(String,Float)]) -> Void {
+        
+        // when the user hits done:
+        //  1. Check if the array of names being passed in matches existing names of Buddy objects from the array of Buddy objects that TripManager holds.
+        //  2. If it matches, don't create new instances of Buddy. If it does not exist, then new Buddy class instances would need to be created using the names passed in.
+        for buddyNameAndPortion in buddyNamesAndPortions {
+            
+            // check if buddyName exists in allBuddies array.
+            // create an array to hold existing buddy names from the allBuddies array that we find.
+            var existingBuddyNames: [String] = []
+            // iterate through the allBuddies array and grab the name properties ".buddyName"
+            for buddy in allBuddies {
+                existingBuddyNames.append(buddy.buddyName)
+            }
+            // check the existingBuddyNames string array contains buddyName. If so, don't create another Buddy. If it does not exist, then initiate a new Buddy and add it to the allBuddies array.
+            let buddyName = buddyNameAndPortion.0
+            let buddyPortion = buddyNameAndPortion.1
+            
+            if !existingBuddyNames.contains(buddyName), let aBuddy = Buddy(buddyName: buddyName) {
+                    allBuddies.append(aBuddy)
+            }
+            //  3. Now an array of Buddy objects exist.
+            
+            //  4. We can create MemberRecord Objects(taking in aBuddy, Buddy's tabAmount, Buddy's paidAmount)
+            var AllBuddyTransactionEventsForThisTransaction: [BuddyTransactionEvent] = []
+            //
+            
+            
+        }
+        
+        
+        //         For each MemberRecord, put it in an array. And call Transaction Class init method that takes the array of MemberRecords, along with context info (Name, Description, Date etc). It will return itself, an instance of the Transaction Class.
+        //
+        //         Take that Transaction Object and put it in to the Transactions array.
+ 
+        
+    }
+    
     
     // func calculateSummaryFromTransactions {...
     /*
