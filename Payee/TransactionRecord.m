@@ -6,6 +6,32 @@
 
 @implementation TransactionRecord
 
++(float)getTabPayOrNet: (NSString*)figure
+              forBuddy: (Buddy*)buddy
+  fromTransactionArray: (NSArray<TransactionRecord*>*)array
+{
+TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:array];
+  BuddyTransactionEvent* thisEvent = [BuddyTransactionEvent returnSumOfEventsArray:sumOfRecords.buddyTransactionEvents forBuddy:buddy];
+  float paid = thisEvent.paidAmountCAD;
+  float tab = thisEvent.tabAmountCAD;
+  float net = paid-tab;
+  float returnAnswer;
+  if ([figure isEqualToString:@"Tab"])
+  {
+    returnAnswer = tab;
+  }
+  else if ([figure isEqualToString:@"Pay"])
+  {
+    returnAnswer = paid;
+  }
+  else if([figure isEqualToString:@"Net"])
+  {
+    returnAnswer = net;
+  }
+  else returnAnswer = 0;
+  return returnAnswer;
+}
+
 +(TransactionRecord*)sumTransactionsFromArray: (NSArray<TransactionRecord*>*)inputArray
 {
   NSMutableSet* buddySet = [[NSMutableSet alloc]init];

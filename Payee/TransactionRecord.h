@@ -17,6 +17,11 @@
 
 +(TransactionRecord*)sumTransactionsFromArray: (NSArray<TransactionRecord*>*)inputArray;
 
++(float)getTabPayOrNet: (NSString*)figure
+              forBuddy: (Buddy*)buddy
+  fromTransactionArray: (NSArray<TransactionRecord*>*)array;
+
+
 -(void)sumWithTransactionRecord: (TransactionRecord*)transactionToAdd;
 
 -(instancetype)initWithName: (NSString*)name
