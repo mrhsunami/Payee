@@ -9,60 +9,61 @@
 import Foundation
 
 class TripManager {
-    
-    // var array of Buddy
+
     var allBuddies: [Buddy] = []
-    
-    // var array of Transactions.
+
     var allTransactions: [TransactionRecord] = []
-    
-    
-    // func touchUpInsideFromDoneButtonPressed {...
-    func callMeFromDoneButton(arrayOfNewBuddyNamesFromTextFieldtext buddyNamesAndPortions: [(String,Float)]) -> Void {
-        
-        // when the user hits done:
-        //  1. Check if the array of names being passed in matches existing names of Buddy objects from the array of Buddy objects that TripManager holds.
-        //  2. If it matches, don't create new instances of Buddy. If it does not exist, then new Buddy class instances would need to be created using the names passed in.
-        for buddyNameAndPortion in buddyNamesAndPortions {
-            
-            // check if buddyName exists in allBuddies array.
-            // create an array to hold existing buddy names from the allBuddies array that we find.
+
+    func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
+
+        // Here is an empty array outside the scope of the for loop that makes multiple BuddyTransactionEvent objects.
+        var buddyTransactionEvents: [BuddyTransactionEvent] = []
+
+        // Create Buddy objects if they don't already exist in allBuddies array
+        for buddyNameAndPortion in arrayOfbuddyNamesAndPortions {
+
+            let buddyName = buddyNameAndPortion.0
+            let buddyPortion = buddyNameAndPortion.1
+            var buddyPaidAmount: Float = 0
+
+            if payerName == buddyName {
+                buddyPaidAmount = expenseAmount
+            }
+
+            // Check if buddyName exists in allBuddies array.
             var existingBuddyNames: [String] = []
-            // iterate through the allBuddies array and grab the name properties ".buddyName"
             for buddy in allBuddies {
                 existingBuddyNames.append(buddy.buddyName)
             }
-            // check the existingBuddyNames string array contains buddyName. If so, don't create another Buddy. If it does not exist, then initiate a new Buddy and add it to the allBuddies array.
-            let buddyName = buddyNameAndPortion.0
-            let buddyPortion = buddyNameAndPortion.1
-            
+
+            // Check if existingBuddyNames array contains buddyName. If so, that buddy already exist. If not create new Buddy and add it to allBuddies array.
             if !existingBuddyNames.contains(buddyName), let aBuddy = Buddy(buddyName: buddyName) {
                     allBuddies.append(aBuddy)
             }
-            //  3. Now an array of Buddy objects exist.
             
-            //  4. We can create MemberRecord Objects(taking in aBuddy, Buddy's tabAmount, Buddy's paidAmount)
-            var AllBuddyTransactionEventsForThisTransaction: [BuddyTransactionEvent] = []
-            //
-            
-            
+            // Create a BuddyTransactionEvent Object. Pass in a Buddy from allBuddies where its name matches buddyName
+            if let currentBuddy = allBuddies.first(where: {$0.buddyName == buddyName}) {
+                if let aBuddyTransactionEvent = BuddyTransactionEvent(buddy: currentBuddy, tabAmountCAD: buddyPortion, andPaidAmountCAD: buddyPaidAmount) {
+                    buddyTransactionEvents.append(aBuddyTransactionEvent)
+                }
+            }
         }
-        
-        
-        //         For each MemberRecord, put it in an array. And call Transaction Class init method that takes the array of MemberRecords, along with context info (Name, Description, Date etc). It will return itself, an instance of the Transaction Class.
-        //
-        //         Take that Transaction Object and put it in to the Transactions array.
- 
-        
+        // Create a TransactionRecord and place it into the TransactionRecord array that TripManager holds
+        let currentDate = Date()
+        if let transactionRecord = TransactionRecord(name: transactionName, date: currentDate, andBuddyTransactionEvents: buddyTransactionEvents) {
+            allTransactions.append(transactionRecord)
+        } else {
+            print("could not add transaction") // later we can make this an alert
+        }
     }
-    
-    
+
+
     // func calculateSummaryFromTransactions {...
     /*
     1. Create empty array of MemberRecords
     2. Take in an array of transactions. For each transaction, it will return all the MemberRecord objects
     3. Now we have array of all MemberRecords from all transactions.
-     
+
      1. First create an empty Dictionary outside that looks like this (Buddy:(Tabs: Float?,Pays: Float?))
      2. Iterate through MemberRecord array and check if Buddy propery matches Dictionary key. If it doesnt exist, Dictionary[Buddy] = (0.0, 0.0). If it does exit, return and do the next one
      3. Now we should have a dictionary with all the Buddies that are found in these MemberRecords. All their .tabs, and .pays are 0.
@@ -71,5 +72,5 @@ class TripManager {
      6. Create a cell with the name as the dictionary key, and a label that shows the difference between the .tab totals and .pay totals.
      7. Return the cell to the TableViewController.
     */
-    
+
 }
