@@ -10,56 +10,56 @@
               forBuddy: (Buddy*)buddy
   fromTransactionArray: (NSArray<TransactionRecord*>*)array
 {
-TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:array];
-  BuddyTransactionEvent* thisEvent = [BuddyTransactionEvent returnSumOfEventsArray:sumOfRecords.buddyTransactionEvents forBuddy:buddy];
-  float paid = thisEvent.paidAmountCAD;
-  float tab = thisEvent.tabAmountCAD;
-  float net = paid-tab;
-  float returnAnswer;
-  if ([figure isEqualToString:@"Tab"])
-  {
-    returnAnswer = tab;
-  }
-  else if ([figure isEqualToString:@"Pay"])
-  {
-    returnAnswer = paid;
-  }
-  else if([figure isEqualToString:@"Net"])
-  {
-    returnAnswer = net;
-  }
-  else returnAnswer = 0;
-  return returnAnswer;
+    TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:array];
+    BuddyTransactionEvent* thisEvent = [BuddyTransactionEvent returnSumOfEventsArray:sumOfRecords.buddyTransactionEvents forBuddy:buddy];
+    float paid = thisEvent.paidAmountCAD;
+    float tab = thisEvent.tabAmountCAD;
+    float net = paid-tab;
+    float returnAnswer;
+    if ([figure isEqualToString:@"Tab"])
+    {
+        returnAnswer = tab;
+    }
+    else if ([figure isEqualToString:@"Pay"])
+    {
+        returnAnswer = paid;
+    }
+    else if([figure isEqualToString:@"Net"])
+    {
+        returnAnswer = net;
+    }
+    else returnAnswer = 0;
+    return returnAnswer;
 }
 
 +(TransactionRecord*)sumTransactionsFromArray: (NSArray<TransactionRecord*>*)inputArray
 {
-  NSMutableSet* buddySet = [[NSMutableSet alloc]init];
-  for (TransactionRecord* transaction in inputArray)
-  {
-    NSArray *eventsArray = transaction.buddyTransactionEvents;
-    for (BuddyTransactionEvent* event in eventsArray)
+    NSMutableSet* buddySet = [[NSMutableSet alloc]init];
+    for (TransactionRecord* transaction in inputArray)
     {
-      [buddySet addObject:event.buddy];
+        NSArray *eventsArray = transaction.buddyTransactionEvents;
+        for (BuddyTransactionEvent* event in eventsArray)
+        {
+            [buddySet addObject:event.buddy];
+        }
     }
-  }
-  NSMutableArray<BuddyTransactionEvent*>* eventsArray2 = [[NSMutableArray alloc]init];
-
+    NSMutableArray<BuddyTransactionEvent*>* eventsArray2 = [[NSMutableArray alloc]init];
+    
     for(TransactionRecord* transaction in inputArray)
     {
-      for(BuddyTransactionEvent* event in transaction.buddyTransactionEvents)
-      {
-        [eventsArray2 addObject:event];
-      }
+        for(BuddyTransactionEvent* event in transaction.buddyTransactionEvents)
+        {
+            [eventsArray2 addObject:event];
+        }
     }
-  NSMutableArray *eventArrayForTransaction = [[NSMutableArray alloc]init];
-  for (Buddy* buddy in buddySet)
-  {
-    BuddyTransactionEvent *event = [BuddyTransactionEvent returnSumOfEventsArray:eventsArray2 forBuddy:buddy];
-    [eventArrayForTransaction addObject:event];
-   }
-      TransactionRecord* returnTransaction = [[TransactionRecord alloc]initWithName:@"VirtualSumTransaction" date:[NSDate date] andBuddyTransactionEvents:eventArrayForTransaction];
-  return returnTransaction;
+    NSMutableArray *eventArrayForTransaction = [[NSMutableArray alloc]init];
+    for (Buddy* buddy in buddySet)
+    {
+        BuddyTransactionEvent *event = [BuddyTransactionEvent returnSumOfEventsArray:eventsArray2 forBuddy:buddy];
+        [eventArrayForTransaction addObject:event];
+    }
+    TransactionRecord* returnTransaction = [[TransactionRecord alloc]initWithName:@"VirtualSumTransaction" date:[NSDate date] andBuddyTransactionEvents:eventArrayForTransaction];
+    return returnTransaction;
 }
 
 
@@ -70,13 +70,13 @@ TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:ar
 
 -(void)sumWithTransactionRecord: (TransactionRecord*)transactionToAdd
 {
-  for (BuddyTransactionEvent* event in self.buddyTransactionEvents)
-       {
-         for (BuddyTransactionEvent* eventToAdd in transactionToAdd.buddyTransactionEvents)
-         {
-           [event sumWithBuddyTransactionEvent:eventToAdd ifBuddyIs:event.buddy];
-         }
-       }
+    for (BuddyTransactionEvent* event in self.buddyTransactionEvents)
+    {
+        for (BuddyTransactionEvent* eventToAdd in transactionToAdd.buddyTransactionEvents)
+        {
+            [event sumWithBuddyTransactionEvent:eventToAdd ifBuddyIs:event.buddy];
+        }
+    }
 }
 
 //MARK: Initializer methods and overrides
@@ -84,14 +84,14 @@ TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:ar
                        date: (NSDate*)date
   andBuddyTransactionEvents: (NSArray*)buddyTransactionEvents
 {
-  self = [super init];
-  if(self)
-  {
-    _transactionName = name;
-    _transactionDate = date;
-    _buddyTransactionEvents = buddyTransactionEvents;
-  }
-  return self;
+    self = [super init];
+    if(self)
+    {
+        _transactionName = name;
+        _transactionDate = date;
+        _buddyTransactionEvents = buddyTransactionEvents;
+    }
+    return self;
 }
 
 //This method creates a zeroed Transaction record from an array of buddy objects.
@@ -100,19 +100,19 @@ TransactionRecord* sumOfRecords = [TransactionRecord sumTransactionsFromArray:ar
 
 -(instancetype)initZeroedTransactionRecordFromBuddyArray: (NSArray<Buddy*>*)buddyArray
 {
-  self = [self initWithName:@"SummingTransaction"
-                       date:[NSDate date]
-  andBuddyTransactionEvents:[[NSArray alloc]init]];
-  NSMutableArray *newArray = [[NSMutableArray alloc]init];
-  for (Buddy* buddy in buddyArray)
-  {
-    BuddyTransactionEvent* newEvent =  [[BuddyTransactionEvent alloc]initNetZeroWithBuddy:buddy];
-    [newArray addObject:newEvent];
-  }
-  _buddyTransactionEvents = newArray;
-  
-  return self;
-  
+    self = [self initWithName:@"SummingTransaction"
+                         date:[NSDate date]
+    andBuddyTransactionEvents:[[NSArray alloc]init]];
+    NSMutableArray *newArray = [[NSMutableArray alloc]init];
+    for (Buddy* buddy in buddyArray)
+    {
+        BuddyTransactionEvent* newEvent =  [[BuddyTransactionEvent alloc]initNetZeroWithBuddy:buddy];
+        [newArray addObject:newEvent];
+    }
+    _buddyTransactionEvents = newArray;
+    
+    return self;
+    
 }
 
 @end
