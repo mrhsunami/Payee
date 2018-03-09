@@ -25,9 +25,9 @@
   for (BuddyTransactionEvent* event in array)
   {
     //this probably needs to be a "is equal to" method, not '=='
-    if (event.buddy == buddy)
+    if ([event.buddy.buddyName isEqualToString:buddy.buddyName])
     {
-      [self returnSumOfEvents:virtualSummingEvent and:event];
+      virtualSummingEvent = [self returnSumOfEvents:virtualSummingEvent and:event];
     }
       
   }

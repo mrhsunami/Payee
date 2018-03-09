@@ -6,4 +6,3 @@
 #import "Buddy.h"
 #import "TransactionRecord.h"
 #import "BuddyTransactionEvent.h"
-

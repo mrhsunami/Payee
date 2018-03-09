@@ -12,6 +12,7 @@
 		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
 		2CE88B842050FF7C004CC735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE88B7F2050FF7C004CC735 /* Main.storyboard */; };
 		2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */; };
+		958AFF642052042500BE686D /* DataModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958AFF632052042500BE686D /* DataModelTests.m */; };
 		95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* TransactionRecord.m */; };
 		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
@@ -21,12 +22,25 @@
 		D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E62F402050F4A6009C8468 /* TripManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		958AFF662052042500BE686D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8C20FC22050BDC400486D7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8C20FC92050BDC400486D7C;
+			remoteInfo = Payee;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2CE88B7F2050FF7C004CC735 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		958AFF612052042500BE686D /* DataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		958AFF632052042500BE686D /* DataModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModelTests.m; sourceTree = "<group>"; };
+		958AFF652052042500BE686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
 		95B427D62050C67100BAC5F4 /* TransactionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionRecord.h; sourceTree = "<group>"; };
 		95B427D72050C67100BAC5F4 /* TransactionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionRecord.m; sourceTree = "<group>"; };
@@ -43,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		958AFF5E2052042500BE686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C20FC72050BDC400486D7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,7 +74,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D8820C8B2052056C0060DC61 /* Recovered References */ = {
+		958AFF622052042500BE686D /* DataModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				958AFF632052042500BE686D /* DataModelTests.m */,
+				958AFF652052042500BE686D /* Info.plist */,
+			);
+			path = DataModelTests;
+			sourceTree = "<group>";
+		};
+		958AFF6C2052154000BE686D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -64,8 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				D8C20FCC2050BDC400486D7C /* Payee */,
+				958AFF622052042500BE686D /* DataModelTests */,
 				D8C20FCB2050BDC400486D7C /* Products */,
-				D8820C8B2052056C0060DC61 /* Recovered References */,
+				958AFF6C2052154000BE686D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C20FCA2050BDC400486D7C /* Payee.app */,
+				958AFF612052042500BE686D /* DataModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +136,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		958AFF602052042500BE686D /* DataModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 958AFF682052042500BE686D /* Build configuration list for PBXNativeTarget "DataModelTests" */;
+			buildPhases = (
+				958AFF5D2052042500BE686D /* Sources */,
+				958AFF5E2052042500BE686D /* Frameworks */,
+				958AFF5F2052042500BE686D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				958AFF672052042500BE686D /* PBXTargetDependency */,
+			);
+			name = DataModelTests;
+			productName = DataModelTests;
+			productReference = 958AFF612052042500BE686D /* DataModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D8C20FC92050BDC400486D7C /* Payee */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C20FDC2050BDC400486D7C /* Build configuration list for PBXNativeTarget "Payee" */;
@@ -131,6 +181,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Nathan Hsu";
 				TargetAttributes = {
+					958AFF602052042500BE686D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D8C20FC92050BDC400486D7C;
+					};
 					D8C20FC92050BDC400486D7C = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -152,11 +207,19 @@
 			projectRoot = "";
 			targets = (
 				D8C20FC92050BDC400486D7C /* Payee */,
+				958AFF602052042500BE686D /* DataModelTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		958AFF5F2052042500BE686D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C20FC82050BDC400486D7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +233,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		958AFF5D2052042500BE686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958AFF642052042500BE686D /* DataModelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C20FC62050BDC400486D7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +259,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		958AFF672052042500BE686D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8C20FC92050BDC400486D7C /* Payee */;
+			targetProxy = 958AFF662052042500BE686D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -200,6 +279,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		958AFF692052042500BE686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V94RGV9SC;
+				INFOPLIST_FILE = DataModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = celoranta.DataModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Payee.app/Payee";
+			};
+			name = Debug;
+		};
+		958AFF6A2052042500BE686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V94RGV9SC;
+				INFOPLIST_FILE = DataModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = celoranta.DataModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Payee.app/Payee";
+			};
+			name = Release;
+		};
 		D8C20FDA2050BDC400486D7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		958AFF682052042500BE686D /* Build configuration list for PBXNativeTarget "DataModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958AFF692052042500BE686D /* Debug */,
+				958AFF6A2052042500BE686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D8C20FC52050BDC400486D7C /* Build configuration list for PBXProject "Payee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
