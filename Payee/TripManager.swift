@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TripManager {
+class TripManager: CanCreateTransactionDelegate {
 
     var allBuddies: [Buddy] = []
 
@@ -55,6 +55,7 @@ class TripManager {
         } else {
             print("could not add transaction") // later we can make this an alert
         }
+        print(allTransactions.count)
     }
 
 
