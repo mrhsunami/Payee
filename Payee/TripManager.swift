@@ -14,7 +14,7 @@ class TripManager {
     var allBuddies: [Buddy] = []
     
     // var array of Transactions.
-    var allTransactions: [Transaction] = []
+    var allTransactions: [TransactionRecord] = []
     
     
     // func touchUpInsideFromDoneButtonPressed {...
@@ -42,7 +42,7 @@ class TripManager {
             //  3. Now an array of Buddy objects exist.
             
             //  4. We can create MemberRecord Objects(taking in aBuddy, Buddy's tabAmount, Buddy's paidAmount)
-            var AllBuddyTransactionEventsForThisTransaction: [MemberRecord] = []
+            var AllBuddyTransactionEventsForThisTransaction: [BuddyTransactionEvent] = []
             //
             
             
