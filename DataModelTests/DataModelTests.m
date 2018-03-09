@@ -75,9 +75,12 @@
   TransactionRecord* transaction1 = [[TransactionRecord alloc]initWithName:@"Sun Sui Wah" date:[NSDate date] andBuddyTransactionEvents:eventArray1];
   TransactionRecord* transaction2 = [[TransactionRecord alloc]initWithName:@"Gotham Steakhouse" date:[NSDate date] andBuddyTransactionEvents:eventArray2];
   
-  NSArray *transactionArray = [[NSArray alloc]initWithObjects:transaction1,transaction2, nil];
+  NSArray<TransactionRecord*> *transactionArray = [[NSArray alloc]initWithObjects:transaction1,transaction2, nil];
   
-  TransactionRecord* summedTransactions = [TransactionRecord sumTransactionsFromArray:transactionArray];
+  float tab = [TransactionRecord getTabPayOrNet:@"Tab" forBuddy:self.buddy1 fromTransactionArray:transactionArray];
+  float pay = [TransactionRecord getTabPayOrNet:@"Pay" forBuddy:self.buddy1 fromTransactionArray:transactionArray];
+  float net = [TransactionRecord getTabPayOrNet:@"Net" forBuddy:self.buddy1 fromTransactionArray:transactionArray];
+  
   
   //Test the class function for adding two buddyTransactionEvents
   XCTAssert(sum1.tabAmountCAD == 80.00);
@@ -91,8 +94,9 @@
   XCTAssert(array3buddy2Total.tabAmountCAD == 100);
   XCTAssert(array3buddy2Total.paidAmountCAD == 0);
   
-  //Test the class method for unpacking an array of transactions into a single summed transaction record
-  
+  XCTAssert(tab == 70.00);
+  XCTAssert(pay == 200.00);
+  XCTAssert(net == -140);
   
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }

@@ -24,12 +24,10 @@
   BuddyTransactionEvent* virtualSummingEvent = [[self alloc]initWithBuddy:buddy tabAmountCAD:0.0 andPaidAmountCAD:0.0];
   for (BuddyTransactionEvent* event in array)
   {
-    //this probably needs to be a "is equal to" method, not '=='
     if ([event.buddy.buddyName isEqualToString:buddy.buddyName])
     {
       virtualSummingEvent = [self returnSumOfEvents:virtualSummingEvent and:event];
     }
-      
   }
   return virtualSummingEvent;
 }
