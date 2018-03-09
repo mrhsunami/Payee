@@ -6,6 +6,36 @@
 
 @implementation TransactionRecord
 
++(TransactionRecord*)sumTransactionsFromArray: (NSArray<TransactionRecord*>*)inputArray
+{
+  NSMutableSet* buddySet = [[NSMutableSet alloc]init];
+  for (TransactionRecord* transaction in inputArray)
+  {
+    NSArray *eventsArray = transaction.buddyTransactionEvents;
+    for (BuddyTransactionEvent* event in eventsArray)
+    {
+      [buddySet addObject:event.buddy];
+    }
+  }
+  NSMutableArray<BuddyTransactionEvent*>* eventsArray2 = [[NSMutableArray alloc]init];
+
+    for(TransactionRecord* transaction in inputArray)
+    {
+      for(BuddyTransactionEvent* event in transaction.buddyTransactionEvents)
+      {
+        [eventsArray2 addObject:event];
+      }
+    }
+  NSMutableArray *eventArrayForTransaction = [[NSMutableArray alloc]init];
+  for (Buddy* buddy in buddySet)
+  {
+    BuddyTransactionEvent *event = [BuddyTransactionEvent returnSumOfEventsArray:eventsArray2 forBuddy:buddy];
+    [eventArrayForTransaction addObject:event];
+   }
+      TransactionRecord* returnTransaction = [[TransactionRecord alloc]initWithName:@"VirtualSumTransaction" date:[NSDate date] andBuddyTransactionEvents:eventArrayForTransaction];
+  return returnTransaction;
+}
+
 
 //MARK: Convenience Methods
 
