@@ -38,9 +38,9 @@ class TripManager {
 
             // Check if existingBuddyNames array contains buddyName. If so, that buddy already exist. If not create new Buddy and add it to allBuddies array.
             if !existingBuddyNames.contains(buddyName), let aBuddy = Buddy(buddyName: buddyName) {
-                    allBuddies.append(aBuddy)
+                allBuddies.append(aBuddy)
             }
-            
+
             // Create a BuddyTransactionEvent Object. Pass in a Buddy from allBuddies where its name matches buddyName
             if let currentBuddy = allBuddies.first(where: {$0.buddyName == buddyName}) {
                 if let aBuddyTransactionEvent = BuddyTransactionEvent(buddy: currentBuddy, tabAmountCAD: buddyPortion, andPaidAmountCAD: buddyPaidAmount) {
@@ -60,9 +60,9 @@ class TripManager {
 
     // func calculateSummaryFromTransactions {...
     /*
-    1. Create empty array of MemberRecords
-    2. Take in an array of transactions. For each transaction, it will return all the MemberRecord objects
-    3. Now we have array of all MemberRecords from all transactions.
+     1. Create empty array of MemberRecords
+     2. Take in an array of transactions. For each transaction, it will return all the MemberRecord objects
+     3. Now we have array of all MemberRecords from all transactions.
 
      1. First create an empty Dictionary outside that looks like this (Buddy:(Tabs: Float?,Pays: Float?))
      2. Iterate through MemberRecord array and check if Buddy propery matches Dictionary key. If it doesnt exist, Dictionary[Buddy] = (0.0, 0.0). If it does exit, return and do the next one
@@ -71,6 +71,6 @@ class TripManager {
      5. At the end of this, we should have a Dectionary with keys for all the Buddy objects. And each Buddy object has a tuple where the .tab is the full amount of debts, and the .pays is the full amount of expenses.
      6. Create a cell with the name as the dictionary key, and a label that shows the difference between the .tab totals and .pay totals.
      7. Return the cell to the TableViewController.
-    */
+     */
 
 }
