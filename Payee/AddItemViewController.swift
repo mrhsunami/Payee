@@ -9,8 +9,9 @@
 import UIKit
 
 class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)]) {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)], itemName : String, payer : String, amount : Float) {
     print(buddyAmountPortion)
+    print(itemName + " " + payer + " " + String(amount))
   }
   
   

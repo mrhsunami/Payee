@@ -9,12 +9,12 @@
 import UIKit
 
 protocol BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion : [(name: String, amountPortion: Float)]) -> ()
+  func didEnterBuddyAmountPortion(buddyAmountPortion : [(name: String, amountPortion: Float)], itemName : String, payer : String, amount : Float) -> ()
 }
 
 class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   
-  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)]) {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)], itemName : String, payer : String, amount : Float) {
     print("passing data back")
   }
 
@@ -45,7 +45,7 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
     buddyAmountPortionArray.append(buddyAmountPortionTuple2 as! (name: String, amountPortion: Float))
     buddyAmountPortionArray.append(buddyAmountPortionTuple3 as! (name: String, amountPortion: Float))
 
-    buddyAmountPortionDelegate?.didEnterBuddyAmountPortion(buddyAmountPortion: buddyAmountPortionArray)
+    buddyAmountPortionDelegate?.didEnterBuddyAmountPortion(buddyAmountPortion: buddyAmountPortionArray, itemName: itemNameLabel.text!, payer: payerLabel.text!, amount: (amountLabel.text! as NSString).floatValue)
     navigationController?.popViewController(animated: true)
   }
   
