@@ -73,6 +73,11 @@
   BuddyTransactionEvent* array2Totals = [BuddyTransactionEvent returnSumOfEventsArray:eventArray2];
   
   TransactionRecord* transaction1 = [[TransactionRecord alloc]initWithName:@"Sun Sui Wah" date:[NSDate date] andBuddyTransactionEvents:eventArray1];
+  TransactionRecord* transaction2 = [[TransactionRecord alloc]initWithName:@"Gotham Steakhouse" date:[NSDate date] andBuddyTransactionEvents:eventArray2];
+  
+  NSArray *transactionArray = [[NSArray alloc]initWithObjects:transaction1,transaction2, nil];
+  
+  TransactionRecord* summedTransactions = [TransactionRecord sumTransactionsFromArray:transactionArray];
   
   //Test the class function for adding two buddyTransactionEvents
   XCTAssert(sum1.tabAmountCAD == 80.00);
@@ -85,6 +90,9 @@
   //Test the class function for adding an array of buddyTransactionEvents filtered by buddy
   XCTAssert(array3buddy2Total.tabAmountCAD == 100);
   XCTAssert(array3buddy2Total.paidAmountCAD == 0);
+  
+  //Test the class method for unpacking an array of transactions into a single summed transaction record
+  
   
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
