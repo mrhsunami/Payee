@@ -17,7 +17,6 @@
 		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
-		D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCF2050BDC400486D7C /* ViewController.swift */; };
 		D8C20FD52050BDC400486D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD42050BDC400486D7C /* Assets.xcassets */; };
 		D8C20FD82050BDC400486D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */; };
 		D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E62F402050F4A6009C8468 /* TripManager.swift */; };
@@ -51,7 +50,6 @@
 		95B427DB2050C67200BAC5F4 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
 		D8C20FCA2050BDC400486D7C /* Payee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C20FCD2050BDC400486D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8C20FCF2050BDC400486D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8C20FD42050BDC400486D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C20FD72050BDC400486D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C20FD92050BDC400486D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,12 +83,20 @@
 			path = DataModelTests;
 			sourceTree = "<group>";
 		};
+		958AFF6C2052154000BE686D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		D8C20FC12050BDC400486D7C = {
 			isa = PBXGroup;
 			children = (
 				D8C20FCC2050BDC400486D7C /* Payee */,
 				958AFF622052042500BE686D /* DataModelTests */,
 				D8C20FCB2050BDC400486D7C /* Products */,
+				958AFF6C2052154000BE686D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,12 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				D8C20FCD2050BDC400486D7C /* AppDelegate.swift */,
-				2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */,
 				2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */,
 				2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */,
 				2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */,
 				2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */,
-				D8C20FD12050BDC400486D7C /* Main.storyboard */,
 				2CE88B7F2050FF7C004CC735 /* Main.storyboard */,
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
 				95B427DB2050C67200BAC5F4 /* Buddy.h */,
@@ -249,7 +253,6 @@
 				D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */,
 				2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */,
 				95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */,
-				D8C20FD02050BDC400486D7C /* ViewController.swift in Sources */,
 				D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
