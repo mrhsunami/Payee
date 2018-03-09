@@ -13,20 +13,20 @@ class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
     print(buddyAmountPortion)
     print(itemName + " " + payer + " " + String(amount))
   }
-  
-  
+
+
   @IBOutlet weak var nextButton: UIButton!
   @IBOutlet weak var amountTextField: UITextField!
   @IBOutlet weak var payerTextField: UITextField!
   @IBOutlet weak var itemNameTextField: UITextField!
-  
+
   var itemName : String = ""
   var payer : String = ""
   var amount : String = ""
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     // Do any additional setup after loading the view, typically from a nib.
   }
 
@@ -48,7 +48,7 @@ class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
     }
     self.amount = amount
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -66,4 +66,3 @@ class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
     }
   }
 }
-
