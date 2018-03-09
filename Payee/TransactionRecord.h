@@ -12,6 +12,10 @@
 @property (nonatomic) NSDate  *transactionDate;
 @property (nonatomic) NSArray *buddyTransactionEvents;
 
+//NS_ASSUME_NONNULL_BEGIN
+//NS_ASSUME_NONNULL_END
+
++(TransactionRecord*)sumTransactionsFromArray: (NSArray<TransactionRecord*>*)inputArray;
 
 -(void)sumWithTransactionRecord: (TransactionRecord*)transactionToAdd;
 
