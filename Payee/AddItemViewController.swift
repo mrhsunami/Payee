@@ -8,13 +8,12 @@
 
 import UIKit
 
-//protocol AddItemProtocol {
-//  var itemName : String { get set }
-//  var payerName : String { get set }
-//  var amount : Float { get set }
-//}
-
-class AddItemViewController: UIViewController {
+class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)], itemName : String, payer : String, amount : Float) {
+    print(buddyAmountPortion)
+    print(itemName + " " + payer + " " + String(amount))
+  }
+  
   
   @IBOutlet weak var nextButton: UIButton!
   @IBOutlet weak var amountTextField: UITextField!
@@ -43,7 +42,6 @@ class AddItemViewController: UIViewController {
       return
     }
     self.payer = payer
-//    guard let amountString = amountTextField.text, amount = Float(amountString) else {
     guard let amount = amountTextField.text, amount != "" else {
       print("amount is empty")
       return
@@ -63,6 +61,7 @@ class AddItemViewController: UIViewController {
         vc?.payer = self.payer
         vc?.amount = self.amount
         vc?.itemName = self.itemName
+        vc?.buddyAmountPortionDelegate = self
       }
     }
   }
