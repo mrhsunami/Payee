@@ -1,0 +1,6 @@
+framework module Pods_Payee {
+  umbrella header "Pods-Payee-umbrella.h"
+
+  export *
+  module * { export * }
+}

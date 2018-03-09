@@ -3,6 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
 @interface Buddy : NSObject
 

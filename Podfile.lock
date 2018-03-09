@@ -1,0 +1,17 @@
+PODS:
+  - PureLayout (3.0.2)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+
+DEPENDENCIES:
+  - PureLayout
+  - Realm
+
+SPEC CHECKSUMS:
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+
+PODFILE CHECKSUM: 7ae1f6a3fd5e5a65ad18c5f1d3cb2c49a485daa6
+
+COCOAPODS: 1.4.0
