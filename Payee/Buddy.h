@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
 
-@interface Buddy : NSObject
+@interface Buddy : RLMObject
 
 @property (nonatomic) NSString *buddyName;
 
