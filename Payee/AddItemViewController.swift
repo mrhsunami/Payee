@@ -8,31 +8,50 @@
 
 import UIKit
 
-class AddItemViewController: UIViewController {
-    func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String, Float)], transactionName: String, payerName: String, expenseAmount: Float) {
-        
-    }
-    
-    //  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)], itemName : String, payer : String, amount : Float) {
-    //    print(buddyAmountPortion)
-    //    print(itemName + " " + payer + " " + String(amount))
-    //  }
-    
+class AddItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var payerTextField: UITextField!
     @IBOutlet weak var itemNameTextField: UITextField!
     
+    let tripManager = TripManager()
     var itemName : String = ""
     var payer : String = ""
     var amount : String = ""
-    let tripManager = TripManager()
+    
+    @objc fileprivate func retractKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveTextField(textField: textField, moveDistance: -80, up: true)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveTextField(textField: textField, moveDistance: -80, up: false)
+    }
+    
+    func moveTextField(textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
+        self.view.addGestureRecognizer(tapToCloseKeyboard)
+        amountTextField.delegate = self
     }
+
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         print("next button tapped")
@@ -65,4 +84,5 @@ class AddItemViewController: UIViewController {
             }
         }
     }
+    
 }
