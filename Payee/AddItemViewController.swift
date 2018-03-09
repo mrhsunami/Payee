@@ -9,7 +9,7 @@
 import UIKit
 
 class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion: AnyObject) {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: String)]) {
     print(buddyAmountPortion)
   }
   
@@ -61,6 +61,7 @@ class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
         vc?.payer = self.payer
         vc?.amount = self.amount
         vc?.itemName = self.itemName
+        vc?.buddyAmountPortionDelegate = self
       }
     }
   }

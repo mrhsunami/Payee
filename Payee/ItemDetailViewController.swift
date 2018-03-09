@@ -9,15 +9,14 @@
 import UIKit
 
 protocol BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion : AnyObject) -> ()
+  func didEnterBuddyAmountPortion(buddyAmountPortion : [(name: String, amountPortion: String)]) -> ()
 }
 
 class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   
-  func didEnterBuddyAmountPortion(buddyAmountPortion: AnyObject) {
-    <#code#>
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: String)]) {
+    print("passing data back")
   }
-  
 
   @IBOutlet weak var doneButton: UIButton!
   @IBOutlet weak var itemNameLabel: UILabel!
@@ -33,7 +32,15 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   var itemName = ""
   var payer = ""
   var amount = ""
-  var buddyAmountPortionDelegate : BuddyAmountPortionDelegate
+  var buddyAmountPortionDelegate : BuddyAmountPortionDelegate? = nil
+  
+//  init() {
+//    buddyAmountPortionDelegate = UIApplication.shared.delegate as! BuddyAmountPortionDelegate
+//  }
+//
+//  required init?(coder aDecoder: NSCoder) {
+//    fatalError("init(coder:) has not been implemented")
+//  }
   
   @IBAction func doneButtonTouched(_ sender: Any) {
     print("done button tapped")
@@ -42,8 +49,11 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
     let buddyAmountPortionTuple3 = (buddy3NameTextField.text, buddy3AmountPortionTextField.text)
     var buddyAmountPortionArray : [(name: String, amountPortion: String)] = []
     buddyAmountPortionArray.append(buddyAmountPortionTuple1 as! (name: String, amountPortion: String))
+    buddyAmountPortionArray.append(buddyAmountPortionTuple2 as! (name: String, amountPortion: String))
+    buddyAmountPortionArray.append(buddyAmountPortionTuple3 as! (name: String, amountPortion: String))
 
-    buddyAmountPortionDelegate.didEnterBuddyAmountPortion(buddyAmountPortion: <#T##AnyObject#>)
+    buddyAmountPortionDelegate?.didEnterBuddyAmountPortion(buddyAmountPortion: buddyAmountPortionArray)
+    navigationController?.popViewController(animated: true)
   }
   
   func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -55,8 +65,8 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
     itemNameLabel?.text = itemName
     payerLabel?.text = payer
     amountLabel?.text = amount
-    self.buddyAmountPortionDelegate = self
-
+//    self.buddyAmountPortionDelegate = self
+//    buddyAmountPortionDelegate = UIApplication.shared.delegate as? BuddyAmountPortionDelegate
 //    doneButton.isEnabled = false
 
         // Do any additional setup after loading the view.
