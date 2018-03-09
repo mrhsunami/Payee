@@ -9,12 +9,12 @@
 import UIKit
 
 protocol BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion : [(name: String, amountPortion: String)]) -> ()
+  func didEnterBuddyAmountPortion(buddyAmountPortion : [(name: String, amountPortion: Float)]) -> ()
 }
 
 class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   
-  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: String)]) {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)]) {
     print("passing data back")
   }
 
@@ -34,23 +34,16 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   var amount = ""
   var buddyAmountPortionDelegate : BuddyAmountPortionDelegate? = nil
   
-//  init() {
-//    buddyAmountPortionDelegate = UIApplication.shared.delegate as! BuddyAmountPortionDelegate
-//  }
-//
-//  required init?(coder aDecoder: NSCoder) {
-//    fatalError("init(coder:) has not been implemented")
-//  }
-  
   @IBAction func doneButtonTouched(_ sender: Any) {
     print("done button tapped")
-    let buddyAmountPortionTuple1 = (buddy1NameTextField.text, buddy1AmountPortionTextField.text)
-    let buddyAmountPortionTuple2 = (buddy2NameTextField.text, buddy2AmountPortionTextField.text)
-    let buddyAmountPortionTuple3 = (buddy3NameTextField.text, buddy3AmountPortionTextField.text)
-    var buddyAmountPortionArray : [(name: String, amountPortion: String)] = []
-    buddyAmountPortionArray.append(buddyAmountPortionTuple1 as! (name: String, amountPortion: String))
-    buddyAmountPortionArray.append(buddyAmountPortionTuple2 as! (name: String, amountPortion: String))
-    buddyAmountPortionArray.append(buddyAmountPortionTuple3 as! (name: String, amountPortion: String))
+    
+    let buddyAmountPortionTuple1 = (buddy1NameTextField.text, (buddy1AmountPortionTextField.text! as NSString).floatValue)
+    let buddyAmountPortionTuple2 = (buddy2NameTextField.text, (buddy2AmountPortionTextField.text! as NSString).floatValue)
+    let buddyAmountPortionTuple3 = (buddy3NameTextField.text, (buddy3AmountPortionTextField.text! as NSString).floatValue)
+    var buddyAmountPortionArray : [(name: String, amountPortion: Float)] = []
+    buddyAmountPortionArray.append(buddyAmountPortionTuple1 as! (name: String, amountPortion: Float))
+    buddyAmountPortionArray.append(buddyAmountPortionTuple2 as! (name: String, amountPortion: Float))
+    buddyAmountPortionArray.append(buddyAmountPortionTuple3 as! (name: String, amountPortion: Float))
 
     buddyAmountPortionDelegate?.didEnterBuddyAmountPortion(buddyAmountPortion: buddyAmountPortionArray)
     navigationController?.popViewController(animated: true)
@@ -61,13 +54,10 @@ class ItemDetailViewController: UIViewController, BuddyAmountPortionDelegate {
   }
   
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
     itemNameLabel?.text = itemName
     payerLabel?.text = payer
     amountLabel?.text = amount
-//    self.buddyAmountPortionDelegate = self
-//    buddyAmountPortionDelegate = UIApplication.shared.delegate as? BuddyAmountPortionDelegate
-//    doneButton.isEnabled = false
 
         // Do any additional setup after loading the view.
     }

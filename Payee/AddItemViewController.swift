@@ -9,7 +9,7 @@
 import UIKit
 
 class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
-  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: String)]) {
+  func didEnterBuddyAmountPortion(buddyAmountPortion: [(name: String, amountPortion: Float)]) {
     print(buddyAmountPortion)
   }
   
@@ -41,7 +41,6 @@ class AddItemViewController: UIViewController, BuddyAmountPortionDelegate {
       return
     }
     self.payer = payer
-//    guard let amountString = amountTextField.text, amount = Float(amountString) else {
     guard let amount = amountTextField.text, amount != "" else {
       print("amount is empty")
       return
