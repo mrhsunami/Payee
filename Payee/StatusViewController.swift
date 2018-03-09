@@ -31,7 +31,7 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    var statusTableViewCell : StatusTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StatusTableViewCell
+    let statusTableViewCell : StatusTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StatusTableViewCell
     statusTableViewCell.buddyNameLabel.text = buddiesArray[indexPath.row]
     statusTableViewCell.netAmountLabel.text = String(netAmountArray[indexPath.row])
     return statusTableViewCell
