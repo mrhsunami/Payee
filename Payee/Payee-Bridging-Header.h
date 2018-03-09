@@ -4,4 +4,6 @@
 
 
 #import "Buddy.h"
-#import "Transaction.h"
+#import "TransactionRecord.h"
+#import "BuddyTransactionEvent.h"
+
