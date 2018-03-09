@@ -12,6 +12,7 @@ class StatusTableViewCell: UITableViewCell {
 
   @IBOutlet weak var netAmountLabel: UILabel!
   @IBOutlet weak var buddyNameLabel: UILabel!
+  
   override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
