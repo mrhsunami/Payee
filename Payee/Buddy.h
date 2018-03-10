@@ -11,6 +11,8 @@
 
 -(instancetype)initWithBuddyName: (NSString*)buddyName;
 
+
+// to be deleted in new data model
 -(instancetype)initVirtualSummingBuddy;
 
 @end

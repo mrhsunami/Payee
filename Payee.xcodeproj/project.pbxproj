@@ -12,6 +12,9 @@
 		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
 		2CE88B842050FF7C004CC735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE88B7F2050FF7C004CC735 /* Main.storyboard */; };
 		2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */; };
+		95316D4B20534D79005DE892 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D4A20534D79005DE892 /* Trip.m */; };
+		95316D4E20534DBA005DE892 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D4D20534DBA005DE892 /* Meal.m */; };
+		95316D5120534DEC005DE892 /* LedgerLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D5020534DEC005DE892 /* LedgerLine.m */; };
 		958AFF642052042500BE686D /* DataModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958AFF632052042500BE686D /* DataModelTests.m */; };
 		95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* TransactionRecord.m */; };
 		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
@@ -42,6 +45,12 @@
 		2CE88B7F2050FF7C004CC735 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		4A3BEAE328B9CE8F28AFD4D5 /* Pods-Payee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Payee/Pods-Payee.debug.xcconfig"; sourceTree = "<group>"; };
+		95316D4920534D79005DE892 /* Trip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		95316D4A20534D79005DE892 /* Trip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		95316D4C20534DBA005DE892 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		95316D4D20534DBA005DE892 /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		95316D4F20534DEC005DE892 /* LedgerLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LedgerLine.h; sourceTree = "<group>"; };
+		95316D5020534DEC005DE892 /* LedgerLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LedgerLine.m; sourceTree = "<group>"; };
 		958AFF612052042500BE686D /* DataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		958AFF632052042500BE686D /* DataModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModelTests.m; sourceTree = "<group>"; };
 		958AFF652052042500BE686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +154,12 @@
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
 				95B427DB2050C67200BAC5F4 /* Buddy.h */,
 				95B427D92050C67200BAC5F4 /* Buddy.m */,
+				95316D4920534D79005DE892 /* Trip.h */,
+				95316D4A20534D79005DE892 /* Trip.m */,
+				95316D4C20534DBA005DE892 /* Meal.h */,
+				95316D4D20534DBA005DE892 /* Meal.m */,
+				95316D4F20534DEC005DE892 /* LedgerLine.h */,
+				95316D5020534DEC005DE892 /* LedgerLine.m */,
 				95B427DA2050C67200BAC5F4 /* BuddyTransactionEvent.h */,
 				95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */,
 				95B427D62050C67100BAC5F4 /* TransactionRecord.h */,
@@ -323,6 +338,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95316D4B20534D79005DE892 /* Trip.m in Sources */,
+				95316D4E20534DBA005DE892 /* Meal.m in Sources */,
+				95316D5120534DEC005DE892 /* LedgerLine.m in Sources */,
 				2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */,
 				2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */,
 				95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */,
