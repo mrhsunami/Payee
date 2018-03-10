@@ -357,7 +357,11 @@
                         <viewLayoutGuide key="safeArea" id="8Ii-e2-fIr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Split Details" id="e01-IU-xvz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z67-4W-8e7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z67-4W-8e7">
+                            <connections>
+                                <action selector="doneButtonTouched:" destination="5YH-By-2Qz" id="PCS-bL-bkd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountLabel" destination="jmM-pg-3AY" id="Hfj-Cr-VcA"/>
@@ -369,6 +373,7 @@
                         <outlet property="buddy3NameTextField" destination="4F8-KB-acH" id="ZWN-bt-Bgh"/>
                         <outlet property="itemNameLabel" destination="ob5-fI-cak" id="liE-XP-twF"/>
                         <outlet property="payerLabel" destination="oUm-eY-9b8" id="h5V-zW-nas"/>
+                        <outlet property="saveButton" destination="z67-4W-8e7" id="vQZ-3f-Fcq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDd-aZ-Ena" userLabel="First Responder" sceneMemberID="firstResponder"/>
