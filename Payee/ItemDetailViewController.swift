@@ -65,9 +65,9 @@ class ItemDetailViewController: UIViewController {
         let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         
-        itemNameLabel?.text = itemName
-        payerLabel?.text = payer
-        amountLabel?.text = amount
+        itemNameLabel.text = itemName
+        payerLabel.text = payer
+        amountLabel.text = amount
     }
     
     override func didReceiveMemoryWarning() {
