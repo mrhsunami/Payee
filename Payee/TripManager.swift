@@ -10,6 +10,8 @@ import Foundation
 
 class TripManager: CanCreateTransactionDelegate {
 
+    static let shared = TripManager()
+    
     var allBuddies: [Buddy] = []
 
     var allTransactions: [TransactionRecord] = []
