@@ -13,13 +13,11 @@
 
 @class Trip;
 
-
 @protocol TripProtocol <NSObject>
 
-@property (nonatomic, weak) Trip *activeTrip;
-@property (nonatomic, weak) RLMRealm *database;
+@property (nonatomic)Trip *activeTrip;
 
-+(Trip*)returnLastAccessedTripOrInitNewInDatabase: (RLMObject*)database;
++(Trip*)returnLastAccessedTripOrInitNewInDatabase;
 
 @end
 
@@ -28,11 +26,9 @@
 
 @property (nonatomic) NSString *tripName;
 @property (nonatomic) NSDate *dateLastAccessed;
-@property (nonatomic, weak) id <TripProtocol> delegate;
+// @property (nonatomic, weak) id <TripProtocol> delegate;
 
-//-(Buddy*)newBuddyWithString: (NSString*)buddyName;
-//-(NSArray*)currentBuddyList;
-//-(void)addTransaction: ()
+
 
 @end
 

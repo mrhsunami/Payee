@@ -9,16 +9,18 @@
 #import "Trip.h"
 @interface Trip ()
 
-
 @end
 
 @implementation Trip
 
-+(Trip*)returnLastAccessedTripOrInitNewInDatabase: (RLMObject*)database
++(Trip*)returnLastAccessedTripOrInitNewInDatabase
 {
+//  RLMRealm *realm = [RLMRealm defaultRealm];
+//  RLMResults<Trip *><Trip> = +[Trip AllObjects];
+  
   if(FALSE)
   {
-    
+
   }
   else
   {
@@ -26,6 +28,8 @@
     return newTrip;
   }
 }
+
+//+[Trip allObjects],
 
 -(void)updateDateLastAccessed
 {
