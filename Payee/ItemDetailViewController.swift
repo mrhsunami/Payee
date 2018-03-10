@@ -31,6 +31,10 @@ class ItemDetailViewController: UIViewController {
     var amount = ""
     var dataProcessingDelegate: CanCreateTransactionDelegate? = nil
     
+    @objc fileprivate func retractKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func doneButtonTouched(_ sender: Any) {
         print("done button tapped")
         
@@ -57,9 +61,13 @@ class ItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemNameLabel?.text = itemName
-        payerLabel?.text = payer
-        amountLabel?.text = amount
+        
+        let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
+        self.view.addGestureRecognizer(tapToCloseKeyboard)
+        
+        itemNameLabel.text = itemName
+        payerLabel.text = payer
+        amountLabel.text = amount
     }
     
     override func didReceiveMemoryWarning() {

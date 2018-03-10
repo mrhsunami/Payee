@@ -10,13 +10,15 @@ import Foundation
 
 class TripManager: CanCreateTransactionDelegate {
 
+    static let shared = TripManager()
+    
     var allBuddies: [Buddy] = []
 
     var allTransactions: [TransactionRecord] = []
 
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
 
-        // Here is an empty array outside the scope of the for loop that makes multiple BuddyTransactionEvent objects.
+        // Here is an empty array outside the scope of the for loop below that makes multiple BuddyTransactionEvent objects.
         var buddyTransactionEvents: [BuddyTransactionEvent] = []
 
         // Create Buddy objects if they don't already exist in allBuddies array
@@ -56,22 +58,10 @@ class TripManager: CanCreateTransactionDelegate {
             print("could not add transaction") // later we can make this an alert
         }
         print(allTransactions.count)
+//        if let summedTransactionRecord = TransactionRecord.sumTransactions(from: allTransactions) {
+//
+//        }
+        
     }
-
-
-    // func calculateSummaryFromTransactions {...
-    /*
-     1. Create empty array of MemberRecords
-     2. Take in an array of transactions. For each transaction, it will return all the MemberRecord objects
-     3. Now we have array of all MemberRecords from all transactions.
-
-     1. First create an empty Dictionary outside that looks like this (Buddy:(Tabs: Float?,Pays: Float?))
-     2. Iterate through MemberRecord array and check if Buddy propery matches Dictionary key. If it doesnt exist, Dictionary[Buddy] = (0.0, 0.0). If it does exit, return and do the next one
-     3. Now we should have a dictionary with all the Buddies that are found in these MemberRecords. All their .tabs, and .pays are 0.
-     4. Iterate through the MemberRecord array for each Dictionary key. Update the tuple ".tab" and ".pays" variables by adding the new value to the old value.
-     5. At the end of this, we should have a Dectionary with keys for all the Buddy objects. And each Buddy object has a tuple where the .tab is the full amount of debts, and the .pays is the full amount of expenses.
-     6. Create a cell with the name as the dictionary key, and a label that shows the difference between the .tab totals and .pay totals.
-     7. Return the cell to the TableViewController.
-     */
 
 }
