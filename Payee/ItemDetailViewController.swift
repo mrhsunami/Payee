@@ -95,7 +95,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
       //    populate the variables passed from add item screen
         itemNameLabel.text = itemName
         payerLabel.text = payer
-        amountLabel.text = "$" + amount
+        amountLabel.text = amount
     }
     
     override func didReceiveMemoryWarning() {
