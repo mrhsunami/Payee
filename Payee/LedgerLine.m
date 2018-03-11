@@ -10,11 +10,12 @@
 
 @implementation LedgerLine
 
-+(NSArray*)settleUpSummary
++(NSArray*)settleUpSummaryForTrip: (Trip*)trip
 {
   RLMRealm *realm = [RLMRealm defaultRealm];
   RLMResults *buddies = [Buddy allObjects];
-  RLMResults *ledgers = [LedgerLine allObjects];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"trip == %@",trip ];
+  RLMResults *ledgers = [LedgerLine objectsWithPredicate:predicate];
   NSMutableArray *buddySummaryArray = [[NSMutableArray alloc]init];
   for (Buddy *buddy in buddies)
   {
@@ -32,6 +33,19 @@
     [buddySummaryArray insertObject:buddyLedgerSummary atIndex:0];
   }
   return buddySummaryArray;
+}
+
++(NSArray*)budListForTrip: (Trip*)trip
+{
+  RLMRealm *realm = [RLMRealm defaultRealm];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"trip == %@",trip ];
+  RLMResults *results = [LedgerLine objectsWithPredicate:predicate];
+  NSMutableArray *tripBuddies = [[NSMutableArray alloc]init];
+  for (LedgerLine* result in results)
+  {
+    [tripBuddies addObject:result];
+  }
+  return tripBuddies;
 }
 
 +(void)clearLedger
