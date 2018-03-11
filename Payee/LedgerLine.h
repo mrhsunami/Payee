@@ -6,7 +6,10 @@
 //  Copyright © 2018 Nathan Hsu. All rights reserved.
 //
 
-#import "HeaderForObjC.h"
+#import "Realm/Realm.h"
+#import "Trip.h"
+#import "Meal.h"
+#import "Buddy.h"
 
 @interface LedgerLine : RLMObject
 
