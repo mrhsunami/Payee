@@ -54,7 +54,6 @@
 		958AFF612052042500BE686D /* DataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		958AFF632052042500BE686D /* DataModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModelTests.m; sourceTree = "<group>"; };
 		958AFF652052042500BE686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		959215A22054F86200A351D2 /* HeaderForObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderForObjC.h; sourceTree = "<group>"; };
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
 		95B427D62050C67100BAC5F4 /* TransactionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionRecord.h; sourceTree = "<group>"; };
 		95B427D72050C67100BAC5F4 /* TransactionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionRecord.m; sourceTree = "<group>"; };
@@ -169,7 +168,6 @@
 				D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */,
 				D8C20FD92050BDC400486D7C /* Info.plist */,
 				95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */,
-				959215A22054F86200A351D2 /* HeaderForObjC.h */,
 			);
 			path = Payee;
 			sourceTree = "<group>";

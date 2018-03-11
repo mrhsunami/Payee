@@ -15,15 +15,23 @@ class TripManager: CanCreateTransactionDelegate {
     var allBuddies: [Buddy] = []
 
     var allTransactions: [TransactionRecord] = []
+  
+    let activeTrip: Trip = Trip.lastAccessedTripOrInitNewInDatabase()
 
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
   
-      let meal: Meal = Meal.init(name: payerName, andExpense: expenseAmount)
+      let meal: Meal = Meal.init(name: transactionName, andExpense: expenseAmount)
       let payer: Buddy = Buddy.newOr(matchingNameString: payerName)
       for buddyNameAndPortion in arrayOfbuddyNamesAndPortions
       {
         let buddyName = buddyNameAndPortion.0
-        Buddy.newOr(matchingNameString: buddyName)
+        let buddy: Buddy = Buddy.newOr(matchingNameString: buddyName)
+        var pay: Float = 0.00;
+        if(payer.isEqual(to: buddy))
+        {
+         pay = expenseAmount
+        }
+        let _: LedgerLine = LedgerLine.init(trip: activeTrip, meal: meal, buddy: buddy, tab: buddyNameAndPortion.1, andPay: pay)
       }
         // Here is an empty array outside the scope of the for loop below that makes multiple BuddyTransactionEvent objects.
         var buddyTransactionEvents: [BuddyTransactionEvent] = []

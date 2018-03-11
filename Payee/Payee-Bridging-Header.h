@@ -8,4 +8,6 @@
 #import "BuddyTransactionEvent.h"
 #import "Trip.h"
 #import "Meal.h"
+#import "LedgerLine.h"
+
 
