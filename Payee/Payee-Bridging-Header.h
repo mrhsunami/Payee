@@ -4,5 +4,8 @@
 
 
 #import "Buddy.h"
-#import "TransactionRecord.h"
-#import "BuddyTransactionEvent.h"
+#import "Trip.h"
+#import "Meal.h"
+#import "LedgerLine.h"
+
+
