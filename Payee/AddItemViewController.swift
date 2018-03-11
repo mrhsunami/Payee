@@ -58,6 +58,10 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
       //Get summary array
       let summaryTest: Array = LedgerLine.settleUpSummary(for: tripManager.activeTrip)
        print(summaryTest)
+      //Get exchange rates
+      
+      let exchangeTest: CurrencyManager = CurrencyManager.init()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
