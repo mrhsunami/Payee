@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4BCEE52054974500F9E30F /* StatusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */; };
 		2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */; };
 		2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */; };
 		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDetailViewController.swift; sourceTree = "<group>"; };
 		2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */,
 				2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */,
 				2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */,
+				2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */,
 				2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */,
 				2CE88B7F2050FF7C004CC735 /* Main.storyboard */,
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4BCEE52054974500F9E30F /* StatusDetailViewController.swift in Sources */,
 				2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */,
 				2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */,
 				95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */,

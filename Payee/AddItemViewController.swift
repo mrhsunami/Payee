@@ -16,6 +16,8 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var itemNameTextField: UITextField!
     
     let tripManager = TripManager.shared
+  
+  //  variables that needs to be passed to item detail screen
     var itemName : String = ""
     var payer : String = ""
     var amount : String = ""
@@ -58,33 +60,16 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.tintAdjustmentMode = .normal
 //        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
     }
-    
-//    @IBAction func nextButtonTouched(_ sender: Any) {
-//        print("next button tapped")
-//        guard let itemName = itemNameTextField.text, itemName != "" else {
-//            print("item name is empty")
-//            return
-//        }
-//        self.itemName = itemName
-//        guard let payer = payerTextField.text, payer != "" else {
-//            print("payer is empty")
-//            return
-//        }
-//        self.payer = payer
-//        guard let amount = amountTextField.text, amount != "" else {
-//            print("amount is empty")
-//            return
-//        }
-//        self.amount = amount
-//    }
-    
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "itemDetailSegue" {
+      
+      //    segue to item detail screen when clicking next
+      if segue.identifier == "itemDetailSegue" {
             if segue.destination is ItemDetailViewController {
                 let vc = segue.destination as? ItemDetailViewController
-                
                 print("next button tapped")
+              
+//              unwrap variables to be passed to item detail screen
                 guard let itemName = itemNameTextField.text, itemName != "" else {
                     print("item name is empty")
                     return
@@ -100,7 +85,8 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 self.amount = amount
-                
+
+//              pass variables to item details screen
                 vc?.payer = self.payer
                 vc?.amount = self.amount
                 vc?.itemName = self.itemName
