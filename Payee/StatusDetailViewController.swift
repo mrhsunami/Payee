@@ -29,7 +29,7 @@ class StatusDetailViewController: UIViewController {
     super.viewDidLoad()
     //    populate the name of the buddy at the top and corresponding net amount
     buddyNameLabel.text = buddyName
-    buddyNetAmountLabel.text = buddyNetAmount
+    buddyNetAmountLabel.text = "$" + buddyNetAmount
     
     //    populate the names of other buddies on the screen
     for (i, otherBuddy) in otherBuddiesArray.enumerated() {
