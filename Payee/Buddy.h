@@ -9,6 +9,10 @@
 
 @property (nonatomic) NSString *buddyName;
 
+
++(NSArray<Buddy*>*)budList;
++(Buddy*)newOrMatchingNameString: (NSString*)name;
+
 -(instancetype)initWithBuddyName: (NSString*)buddyName;
 
 

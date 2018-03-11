@@ -17,7 +17,14 @@ class TripManager: CanCreateTransactionDelegate {
     var allTransactions: [TransactionRecord] = []
 
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
-
+  
+      let meal: Meal = Meal.init(name: payerName, andExpense: expenseAmount)
+      let payer: Buddy = Buddy.newOr(matchingNameString: payerName)
+      for buddyNameAndPortion in arrayOfbuddyNamesAndPortions
+      {
+        let buddyName = buddyNameAndPortion.0
+        Buddy.newOr(matchingNameString: buddyName)
+      }
         // Here is an empty array outside the scope of the for loop below that makes multiple BuddyTransactionEvent objects.
         var buddyTransactionEvents: [BuddyTransactionEvent] = []
 
@@ -34,14 +41,16 @@ class TripManager: CanCreateTransactionDelegate {
 
             // Check if buddyName exists in allBuddies array.
             var existingBuddyNames: [String] = []
+          //add for REALM implementation - Chris
+            allBuddies = Buddy.budList()
             for buddy in allBuddies {
                 existingBuddyNames.append(buddy.buddyName)
             }
 
             // Check if existingBuddyNames array contains buddyName. If so, that buddy already exist. If not create new Buddy and add it to allBuddies array.
-            if !existingBuddyNames.contains(buddyName), let aBuddy = Buddy(buddyName: buddyName) {
+          if !existingBuddyNames.contains(buddyName){ /*var aBuddy = */Buddy(buddyName: buddyName) }/* update: buddies are now added to realm during initialization {
                 allBuddies.append(aBuddy)
-            }
+            }*/
 
             // Create a BuddyTransactionEvent Object. Pass in a Buddy from allBuddies where its name matches buddyName
             if let currentBuddy = allBuddies.first(where: {$0.buddyName == buddyName}) {

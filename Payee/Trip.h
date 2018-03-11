@@ -6,10 +6,7 @@
 //  Copyright © 2018 Nathan Hsu. All rights reserved.
 //
 
-#import <Realm/Realm.h>
-#import "Buddy.h"
-#import "Meal.h"
-#import "LedgerLine.h"
+#import "HeaderForObjC.h"
 
 @class Trip;
 

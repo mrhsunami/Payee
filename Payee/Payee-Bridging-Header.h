@@ -6,6 +6,6 @@
 #import "Buddy.h"
 #import "TransactionRecord.h"
 #import "BuddyTransactionEvent.h"
-//Testing Realm and Trip - Chris
 #import "Trip.h"
+#import "Meal.h"
 

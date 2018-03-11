@@ -9,5 +9,12 @@
 #ifndef HeaderForObjC_h
 #define HeaderForObjC_h
 
+#import <Realm/Realm.h>
+#import "Trip.h"
+#import "Meal.h"
+#import "Buddy.h"
+#import "LedgerLine.h"
+
+
 
 #endif /* HeaderForObjC_h */

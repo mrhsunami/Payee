@@ -6,8 +6,21 @@
 //  Copyright © 2018 Nathan Hsu. All rights reserved.
 //
 
-#import "RLMObject.h"
+#import "HeaderForObjC.h"
 
 @interface LedgerLine : RLMObject
+
+@property (nonatomic) Trip* trip;
+@property (nonatomic) Meal* meal;
+@property (nonatomic) Buddy* buddy;
+@property (nonatomic) float tab;
+@property (nonatomic) float pay;
+@property (nonatomic) NSDate *date;
+
+-(instancetype)initWithTrip: (Trip*)trip
+                       meal: (Meal*)meal
+                      buddy: (Buddy*)buddy
+                        tab: (float)tab
+                     andPay: (float)pay;
 
 @end
