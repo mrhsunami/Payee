@@ -20,7 +20,8 @@
 @property (nonatomic) float tab;
 @property (nonatomic) float pay;
 
-+(NSArray*)settleUpSummary;
++(NSArray*)settleUpSummaryForTrip: (Trip*)trip;
++(NSArray*)budListForTrip: (Trip*)trip;
 
 +(void)clearLedger;
 
