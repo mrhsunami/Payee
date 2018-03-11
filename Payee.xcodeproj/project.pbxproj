@@ -12,14 +12,16 @@
 		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
 		2CE88B842050FF7C004CC735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE88B7F2050FF7C004CC735 /* Main.storyboard */; };
 		2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */; };
+		95316D4B20534D79005DE892 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D4A20534D79005DE892 /* Trip.m */; };
+		95316D4E20534DBA005DE892 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D4D20534DBA005DE892 /* Meal.m */; };
+		95316D5120534DEC005DE892 /* LedgerLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 95316D5020534DEC005DE892 /* LedgerLine.m */; };
 		958AFF642052042500BE686D /* DataModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958AFF632052042500BE686D /* DataModelTests.m */; };
-		95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D72050C67100BAC5F4 /* TransactionRecord.m */; };
-		95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
 		D8C20FD52050BDC400486D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD42050BDC400486D7C /* Assets.xcassets */; };
 		D8C20FD82050BDC400486D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */; };
 		D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E62F402050F4A6009C8468 /* TripManager.swift */; };
+		F4C71EB0FCC29AE7C67FE898 /* libPods-Payee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C47F8646C6A60177F83218 /* libPods-Payee.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,20 +35,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C47F8646C6A60177F83218 /* libPods-Payee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Payee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4C825AA3858F324E5BE612 /* Pods-Payee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Payee/Pods-Payee.release.xcconfig"; sourceTree = "<group>"; };
 		2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2CE88B7F2050FF7C004CC735 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		4A3BEAE328B9CE8F28AFD4D5 /* Pods-Payee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Payee/Pods-Payee.debug.xcconfig"; sourceTree = "<group>"; };
+		95316D4920534D79005DE892 /* Trip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		95316D4A20534D79005DE892 /* Trip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		95316D4C20534DBA005DE892 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		95316D4D20534DBA005DE892 /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		95316D4F20534DEC005DE892 /* LedgerLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LedgerLine.h; sourceTree = "<group>"; };
+		95316D5020534DEC005DE892 /* LedgerLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LedgerLine.m; sourceTree = "<group>"; };
 		958AFF612052042500BE686D /* DataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		958AFF632052042500BE686D /* DataModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModelTests.m; sourceTree = "<group>"; };
 		958AFF652052042500BE686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
-		95B427D62050C67100BAC5F4 /* TransactionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionRecord.h; sourceTree = "<group>"; };
-		95B427D72050C67100BAC5F4 /* TransactionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionRecord.m; sourceTree = "<group>"; };
-		95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyTransactionEvent.m; sourceTree = "<group>"; };
 		95B427D92050C67200BAC5F4 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
-		95B427DA2050C67200BAC5F4 /* BuddyTransactionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyTransactionEvent.h; sourceTree = "<group>"; };
 		95B427DB2050C67200BAC5F4 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
 		D8C20FCA2050BDC400486D7C /* Payee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C20FCD2050BDC400486D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,12 +75,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C71EB0FCC29AE7C67FE898 /* libPods-Payee.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		158439B494660717B0060ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A3BEAE328B9CE8F28AFD4D5 /* Pods-Payee.debug.xcconfig */,
+				0E4C825AA3858F324E5BE612 /* Pods-Payee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6ECF97D32827DC9E61473666 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00C47F8646C6A60177F83218 /* libPods-Payee.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		958AFF622052042500BE686D /* DataModelTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +122,8 @@
 				958AFF622052042500BE686D /* DataModelTests */,
 				D8C20FCB2050BDC400486D7C /* Products */,
 				958AFF6C2052154000BE686D /* Recovered References */,
+				158439B494660717B0060ACA /* Pods */,
+				6ECF97D32827DC9E61473666 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,10 +148,12 @@
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
 				95B427DB2050C67200BAC5F4 /* Buddy.h */,
 				95B427D92050C67200BAC5F4 /* Buddy.m */,
-				95B427DA2050C67200BAC5F4 /* BuddyTransactionEvent.h */,
-				95B427D82050C67200BAC5F4 /* BuddyTransactionEvent.m */,
-				95B427D62050C67100BAC5F4 /* TransactionRecord.h */,
-				95B427D72050C67100BAC5F4 /* TransactionRecord.m */,
+				95316D4920534D79005DE892 /* Trip.h */,
+				95316D4A20534D79005DE892 /* Trip.m */,
+				95316D4C20534DBA005DE892 /* Meal.h */,
+				95316D4D20534DBA005DE892 /* Meal.m */,
+				95316D4F20534DEC005DE892 /* LedgerLine.h */,
+				95316D5020534DEC005DE892 /* LedgerLine.m */,
 				D8C20FD42050BDC400486D7C /* Assets.xcassets */,
 				D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */,
 				D8C20FD92050BDC400486D7C /* Info.plist */,
@@ -158,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C20FDC2050BDC400486D7C /* Build configuration list for PBXNativeTarget "Payee" */;
 			buildPhases = (
+				931657D4A35646825610CD34 /* [CP] Check Pods Manifest.lock */,
 				D8C20FC62050BDC400486D7C /* Sources */,
 				D8C20FC72050BDC400486D7C /* Frameworks */,
 				D8C20FC82050BDC400486D7C /* Resources */,
+				7C073990889FA9D72B9651C4 /* [CP] Embed Pods Frameworks */,
+				DD9DD9655BC6A6C3DAA5023C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +264,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C073990889FA9D72B9651C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payee/Pods-Payee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		931657D4A35646825610CD34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Payee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD9DD9655BC6A6C3DAA5023C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payee/Pods-Payee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		958AFF5D2052042500BE686D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,10 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95316D4B20534D79005DE892 /* Trip.m in Sources */,
+				95316D4E20534DBA005DE892 /* Meal.m in Sources */,
+				95316D5120534DEC005DE892 /* LedgerLine.m in Sources */,
 				2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */,
 				2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */,
-				95B427DD2050C67300BAC5F4 /* BuddyTransactionEvent.m in Sources */,
-				95B427DC2050C67300BAC5F4 /* TransactionRecord.m in Sources */,
 				2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */,
 				D8E62F412050F4A6009C8468 /* TripManager.swift in Sources */,
 				2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */,
@@ -345,6 +429,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -402,6 +487,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -420,6 +506,7 @@
 		};
 		D8C20FDD2050BDC400486D7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3BEAE328B9CE8F28AFD4D5 /* Pods-Payee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -429,7 +516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Payee/Payee-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chriseloranta/Desktop/Lighthouse/MidtermProject/Payee/Payee/Payee-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,6 +525,7 @@
 		};
 		D8C20FDE2050BDC400486D7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4C825AA3858F324E5BE612 /* Pods-Payee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -447,7 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Payee/Payee-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chriseloranta/Desktop/Lighthouse/MidtermProject/Payee/Payee/Payee-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

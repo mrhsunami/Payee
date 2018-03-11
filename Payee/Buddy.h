@@ -3,13 +3,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface Buddy : NSObject
+@interface Buddy : RLMObject
 
 @property (nonatomic) NSString *buddyName;
 
+
++(NSArray<Buddy*>*)budList;
++(Buddy*)newOrMatchingNameString: (NSString*)name;
+
 -(instancetype)initWithBuddyName: (NSString*)buddyName;
 
+
+// to be deleted in new data model
 -(instancetype)initVirtualSummingBuddy;
 
 @end

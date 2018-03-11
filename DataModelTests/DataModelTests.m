@@ -10,6 +10,8 @@
 #import "Buddy.h"
 #import "BuddyTransactionEvent.h"
 #import "TransactionRecord.h"
+#import "Realm/Realm.h"
+#import "Trip.h"
 
 @interface DataModelTests : XCTestCase
 
@@ -99,6 +101,10 @@
   XCTAssert(net == -140);
   
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testTripAndRealm {
+   Trip *aTrip = [Trip return]
 }
 
 - (void)testPerformanceExample {

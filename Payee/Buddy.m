@@ -6,6 +6,35 @@
 
 @implementation Buddy
 
+
++(NSArray*)budList
+{
+  RLMRealm *realm = [RLMRealm defaultRealm];
+  RLMResults *buddies = [Buddy allObjects];
+  NSMutableArray *array = [[NSMutableArray alloc]init];
+  for (Buddy *buddy in buddies)
+  {
+    [array addObject:buddy];
+  }
+  return array;
+}
+
++(Buddy*)newOrMatchingNameString: (NSString*)name
+{
+  Buddy *returnBuddy;
+  RLMRealm *realm = [RLMRealm defaultRealm];
+  RLMResults *results = [Buddy objectsWhere:@"buddyName == %@",name];
+  if(results.count > 0)
+  {
+    returnBuddy = [results firstObject];
+  }
+  else
+  {
+    returnBuddy = [[Buddy alloc]initWithBuddyName:name];
+  }
+  return returnBuddy;
+}
+
 //MARK: initializer methods
 -(instancetype)initWithBuddyName: (NSString*)buddyName
 {
@@ -13,6 +42,10 @@
   if(self)
   {
     _buddyName = buddyName;
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    [realm addObject:self];
+    [realm commitWriteTransaction];
   }
   return self;
 }

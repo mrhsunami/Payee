@@ -96,7 +96,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="179.77709100235413"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="-54.833762764189515"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="146.95703125" x="10.021484375" y="1.7073420376532127">BUDDY, BUDDYID, NAME<y:LabelModel>
@@ -114,7 +114,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="201.32458757766057"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="-33.286266188883076"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.734375" x="46.1328125" y="1.7073420376532198">F8B3, CHRIS<y:LabelModel>
@@ -132,7 +132,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="222.87208415296698"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="-11.738769613576665"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="94.755859375" x="36.1220703125" y="1.7073420376532056">8C4D, NATHAN<y:LabelModel>
@@ -150,7 +150,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="244.4195807282734"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="9.808726961729747"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="76.05859375" x="45.470703125" y="1.7073420376532198">9A3E, KEVIN<y:LabelModel>
@@ -168,7 +168,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="340.63176908478704"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="106.0209153182434"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.125" x="16.4375" y="1.707342037653234">F5C4, A&amp;W, 18/14/05<y:LabelModel>
@@ -186,7 +186,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="362.1792656600935"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="127.56841189354986"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.90625" x="5.046875" y="1.7073420376532056">D5A3, DENNYS, 18/13/04<y:LabelModel>
@@ -204,7 +204,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="319.0842725094807"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="84.47341874293704"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="128.494140625" x="19.2529296875" y="1.7073420376532056">MEALID, NAME, DATE<y:LabelModel>
@@ -222,7 +222,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="439.1104919860834"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="204.49963821953975"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="116.1484375" x="25.42578125" y="1.707342037653234">TRIP ID, TRIP NAME<y:LabelModel>
@@ -240,7 +240,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="460.65798856138986"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="226.04713479484622"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.931640625" x="40.5341796875" y="1.707342037653234">BC7D, HAWAII<y:LabelModel>
@@ -258,7 +258,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="167.0" x="1258.268607174879" y="482.2054851366962"/>
+          <y:Geometry height="21.547496575306425" width="167.0" x="1343.2457668068553" y="247.59463137015257"/>
           <y:Fill color="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.95703125" x="46.021484375" y="1.707342037653234">335B, SPAIN<y:LabelModel>
@@ -276,7 +276,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="820.5027274226164" y="275.98927935886786"/>
+          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="905.4798870545927" y="41.37842559232422"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="241.6796875" x="15.0420146407929" y="1.7073420376532056">LEDGERID, TAB, PAY, BUDDY, MEAL, TRIP<y:LabelModel>
@@ -294,7 +294,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="820.5027274226164" y="297.53677593417433"/>
+          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="905.4798870545927" y="62.92592216763069"/>
           <y:Fill color="#00CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.46484375" x="35.6494365157929" y="1.7073420376532056">0000, $34, $0, F8B3, F5C4, BC7D<y:LabelModel>
@@ -312,7 +312,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="820.5027274226164" y="319.0842725094807"/>
+          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="905.4798870545927" y="84.47341874293704"/>
           <y:Fill color="#99FF99" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="214.5390625" x="28.6123271407929" y="1.7073420376532056">0001, $14, $50, 8C4D, D5A3, BC7D<y:LabelModel>
@@ -330,7 +330,7 @@ MEALID, TRIPID<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="820.5027274226164" y="340.6317690847871"/>
+          <y:Geometry height="21.547496575306425" width="271.7637167815858" x="905.4798870545927" y="106.02091531824345"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="209.5" x="31.1318583907929" y="1.707342037653234">0002, $14, $50, 9A3E, F5C4, BC7D<y:LabelModel>
@@ -338,6 +338,156 @@ MEALID, TRIPID<y:LabelModel>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n18">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="100.41775415993311" width="339.30823674249564" x="437.5254585805742" y="814.5157185357151"/>
+          <y:Fill color="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="88.796875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="307.7734375" x="4.0" y="4.0">BUDDY OBJECT
+SUBCLASS OF (REALM)OBJECT
+@(String)Buddy UUID
+@(String)BuddyName
++(Buddy*)returnBuddyPointerForUUID: (String*)UUID
+	               fromList: ([Meal*])<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n19">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="249.24497335711862" width="439.15163876418444" x="644.9313928982237" y="339.6348324897503"/>
+          <y:Fill color="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="244.2578125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="428.16015625" x="4.0" y="4.000000000000057">TRIP OBJECT
+SUBCLASS OF (REALM)OBJECT
+
+@(String)TripName
+@(Date)MostRecentEditDate
+
+View Controller calls Trip class method to return most recent trip
+	object reference
+View Controller Assigns itself to a trip object's delegate field.
+Runs a method, passing the Specific:
+-Buddies (or null)
+-Meal / Meals (or null) &lt;less important&gt;
+And the trip returns a list of matching ledger lines
+  (Should be a summary ledger for each buddy in the trip)
+Each returned ledger line returns its buddy name (and meal?) from realm
+
+
+<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n20">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="114.61104675299816" width="339.30823674249564" x="1151.7448530228132" y="814.5157185357151"/>
+          <y:Fill color="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="102.9296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="290.55859375" x="3.9999999999997726" y="4.0">MEAL OBJECT
+SUBCLASS OF (REALM)OBJECT
+@(String)Meal UUID
+@(String)MealName
+date?
++(Meal*)returnMealPointerForUUID: (String*)UUID
+	               fromList: ([Meal*])
+<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n21">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="210.67218372827585" width="339.30823674249564" x="794.6351558016937" y="814.5157185357151"/>
+          <y:Fill color="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="201.859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="231.44921875" x="4.0" y="4.000000000000114">LEDGER LINE OBJECT
+SUBCLASS OF (REALM)OBJECT
+
+@(float)TAB
+@(float)PAY
+@(String)BUDDY UUID
+@(String)MEAL UUID
+@(String)TRIP UUID
+-(Buddy*)returnBuddy
+-(Meal*)returnMeal
+-(Trip*)returnTrip
++(LedgerLine*)returnLedgerLinePointer
+	ForUUID: (String*)UUID
+	fromList: ([LedgerLine*])<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n22">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="356.3900876756977" width="439.15163876418444" x="1103.1301740655817" y="339.63483248975024"/>
+          <y:Fill color="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="258.390625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="441.30859375" x="4.0" y="4.0">TRIP OBJECT
+SUBCLASS OF (REALM)OBJECT
+
+@(String)TripName
+
+View Controller Assigns itself to a trip object's delegate field.
+Runs a method, passing in a new buddy to be added
+OR a method, passing in a transaction
+
+
+The trip object adds a meal to the meal list
+The trip object adds any new buddies to the realm buddy list
+The trip object adds itself as a reference object on each ledger line of the 
+transaction
+The trip object adds the meal and buddy reference to each ledger line 
+of the transaction
+The trip object sends the completed buddy line to the realm ledger line list
+
+<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
           <y:Shape type="rectangle"/>
