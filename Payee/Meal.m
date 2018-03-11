@@ -25,7 +25,6 @@
   self = [super init];
   if(self)
   {
-    _mealId = [[NSUUID alloc]init];
   }
   return self;
 }

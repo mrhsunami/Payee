@@ -9,23 +9,42 @@
 #import "Trip.h"
 @interface Trip ()
 
+
+
 @end
 
 @implementation Trip
 
-+(Trip*)returnLastAccessedTripOrInitNewInDatabase
++(Trip*)LastAccessedTripOrInitNewInDatabase
 {
-//  RLMRealm *realm = [RLMRealm defaultRealm];
-//  RLMResults<Trip *><Trip> = +[Trip AllObjects];
-  
-  if(FALSE)
+  RLMRealm *realm = [RLMRealm defaultRealm];
+  RLMResults<Trip*> *trips = [Trip allObjects];
+  Trip *newTrip = [[Trip alloc]initFirstTrip];
+  Trip *currentTrip;
+  if([realm isEmpty])
   {
-
+    [realm beginWriteTransaction];
+    [realm addObject:newTrip];
+    [realm commitWriteTransaction];
+    return newTrip;
+  }
+  else if (trips.count == 1)
+  {
+    return [trips firstObject];
   }
   else
   {
-    Trip *newTrip = [[Trip alloc]initFirstTrip];
-    return newTrip;
+
+    RLMResults* results = [Trip allObjectsInRealm:realm];
+    NSDate *mostRecentEdit = [results maxOfProperty:@"dateLastAccessed"];
+    for(Trip *trip in results)
+    {
+      if (trip.dateLastAccessed == mostRecentEdit)
+      {currentTrip = trip;
+      }
+    }
+    [currentTrip updateDateLastAccessed];
+    return currentTrip;
   }
 }
 
@@ -35,6 +54,7 @@
 {
   self.dateLastAccessed = [NSDate date];
 }
+
 
 -(instancetype)initWithName: (NSString*)name
 {
@@ -50,6 +70,11 @@
 -(instancetype)initFirstTrip
 {
   self = [self initWithName:@"Our Amazing Trip"];
+  return self;
+}
+
+-(instancetype)init{
+  self = [self initWithName:@"defaultName"];
   return self;
 }
 @end

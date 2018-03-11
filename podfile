@@ -7,5 +7,5 @@ target 'Payee' do
 
   # Pods for Payee
 pod 'Realm'
-pod 'PureLayout'
+# pod 'PureLayout'
 end

@@ -11,7 +11,7 @@
 @interface Meal : RLMObject
 
 @property (nonatomic) NSString* mealName;
-@property (nonatomic) NSUUID *mealId;
+
 
 -(instancetype)initWithName: (NSString*)name;
 

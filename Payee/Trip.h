@@ -17,7 +17,7 @@
 
 @property (nonatomic)Trip *activeTrip;
 
-+(Trip*)returnLastAccessedTripOrInitNewInDatabase;
+
 
 @end
 
@@ -28,7 +28,7 @@
 @property (nonatomic) NSDate *dateLastAccessed;
 // @property (nonatomic, weak) id <TripProtocol> delegate;
 
-
++(Trip*)LastAccessedTripOrInitNewInDatabase;
 
 @end
 

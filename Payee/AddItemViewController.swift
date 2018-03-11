@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AddItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
@@ -51,6 +52,9 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         amountTextField.delegate = self
         nextButton.isEnabled = true
+      var lastTrip: Trip = Trip.lastAccessedTripOrInitNewInDatabase()
+      var nextTrip: Trip = Trip.lastAccessedTripOrInitNewInDatabase()
+      print(lastTrip, nextTrip)
     }
 
     override func viewWillAppear(_ animated: Bool) {
