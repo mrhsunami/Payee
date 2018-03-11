@@ -18,6 +18,7 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
   override func viewDidLoad() {
     super.viewDidLoad()
     self.statusTableView.dataSource = self
+    //    self.statusTableView.delegate = self  //in case delegate property is ever needed
     // Do any additional setup after loading the view, typically from a nib.
   }
 
@@ -35,6 +36,30 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
     statusTableViewCell.buddyNameLabel.text = buddiesArray[indexPath.row]
     statusTableViewCell.netAmountLabel.text = String(netAmountArray[indexPath.row])
     return statusTableViewCell
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    //    segue to summary detail screen when clicking on each buddy
+    if segue.identifier == "statusDetailSegue" {
+      if segue.destination is StatusDetailViewController {
+        let vc = segue.destination as? StatusDetailViewController
+        
+        //        reference to selected buddy
+        var indexPath : IndexPath = self.statusTableView.indexPathForSelectedRow!
+        
+        //        buddy name from selected buddy
+        vc?.buddyName = buddiesArray[indexPath.row]
+        
+        //        create separate array with other buddies that were not selected
+        //        by removing selected buddy from it
+        var otherBuddiesArray = buddiesArray
+        otherBuddiesArray.remove(at: indexPath.row)
+        vc?.otherBuddiesArray = otherBuddiesArray
+        
+        vc?.buddyNetAmount = String(netAmountArray[indexPath.row])  //selected buddy net amount
+      }
+    }
   }
 }
 

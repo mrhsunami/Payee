@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4BCEE52054974500F9E30F /* StatusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */; };
 		2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */; };
 		2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */; };
 		2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		00C47F8646C6A60177F83218 /* libPods-Payee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Payee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4C825AA3858F324E5BE612 /* Pods-Payee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Payee/Pods-Payee.release.xcconfig"; sourceTree = "<group>"; };
+		2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDetailViewController.swift; sourceTree = "<group>"; };
 		2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				2CE88B7E2050FF7C004CC735 /* AddItemViewController.swift */,
 				2CE88B802050FF7C004CC735 /* ItemDetailViewController.swift */,
 				2CE88B7C2050FF7C004CC735 /* StatusViewController.swift */,
+				2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */,
 				2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */,
 				2CE88B7F2050FF7C004CC735 /* Main.storyboard */,
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
@@ -331,6 +334,7 @@
 				95316D4B20534D79005DE892 /* Trip.m in Sources */,
 				95316D4E20534DBA005DE892 /* Meal.m in Sources */,
 				95316D5120534DEC005DE892 /* LedgerLine.m in Sources */,
+				2C4BCEE52054974500F9E30F /* StatusDetailViewController.swift in Sources */,
 				2CE88B852050FF7C004CC735 /* ItemDetailViewController.swift in Sources */,
 				2CE88B812050FF7C004CC735 /* StatusViewController.swift in Sources */,
 				2CE88B822050FF7C004CC735 /* StatusTableViewCell.swift in Sources */,
