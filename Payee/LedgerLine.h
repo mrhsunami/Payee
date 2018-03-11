@@ -15,10 +15,11 @@
 
 @property (nonatomic) Trip* trip;
 @property (nonatomic) Meal* meal;
+@property (nonatomic) NSDate *date;
 @property (nonatomic) Buddy* buddy;
 @property (nonatomic) float tab;
 @property (nonatomic) float pay;
-@property (nonatomic) NSDate *date;
+
 
 -(instancetype)initWithTrip: (Trip*)trip
                        meal: (Meal*)meal
