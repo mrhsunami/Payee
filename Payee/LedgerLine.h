@@ -20,6 +20,9 @@
 @property (nonatomic) float tab;
 @property (nonatomic) float pay;
 
++(NSArray*)settleUpSummary;
+
++(void)clearLedger;
 
 -(instancetype)initWithTrip: (Trip*)trip
                        meal: (Meal*)meal
