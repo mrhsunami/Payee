@@ -19,10 +19,11 @@ class TripManager: CanCreateTransactionDelegate {
     let activeTrip: Trip = Trip.lastAccessedTripOrInitNewInDatabase()
 
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
-  
+      //this adds the payer to the front of the array, in case they paid but did not incur an expense amount
+      let participatingBuddies: Array = [(payerName, 0.00)] + arrayOfbuddyNamesAndPortions
       let meal: Meal = Meal.init(name: transactionName, andExpense: expenseAmount)
       let payer: Buddy = Buddy.newOr(matchingNameString: payerName)
-      for buddyNameAndPortion in arrayOfbuddyNamesAndPortions
+      for buddyNameAndPortion in participatingBuddies
       {
         let buddyName = buddyNameAndPortion.0
         let buddy: Buddy = Buddy.newOr(matchingNameString: buddyName)
