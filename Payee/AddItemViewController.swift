@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AddItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
@@ -53,6 +54,8 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         amountTextField.delegate = self
         nextButton.isEnabled = true
+      let summaryTest: Array = LedgerLine.settleUpSummary()
+       print(summaryTest)
     }
 
     override func viewWillAppear(_ animated: Bool) {
