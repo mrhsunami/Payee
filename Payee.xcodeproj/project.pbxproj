@@ -120,6 +120,7 @@
 		D8C20FC12050BDC400486D7C = {
 			isa = PBXGroup;
 			children = (
+				95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */,
 				D8C20FCC2050BDC400486D7C /* Payee */,
 				958AFF622052042500BE686D /* DataModelTests */,
 				D8C20FCB2050BDC400486D7C /* Products */,
@@ -160,7 +161,6 @@
 				D8C20FD42050BDC400486D7C /* Assets.xcassets */,
 				D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */,
 				D8C20FD92050BDC400486D7C /* Info.plist */,
-				95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */,
 			);
 			path = Payee;
 			sourceTree = "<group>";
@@ -520,7 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chriseloranta/Desktop/Lighthouse/MidtermProject/Payee/Payee/Payee-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Payee-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hsunami.Payee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/chriseloranta/Desktop/Lighthouse/MidtermProject/Payee/Payee/Payee-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Payee-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
