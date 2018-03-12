@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConversionRate.h"
 
 @interface CurrencyManager : NSObject
 
-@property (nonatomic) NSDictionary *currenciesList;
 
+
++(double)convert: (float)foreignValue
+              from: (NSString*)foreignCurrency
+              to: (NSString*)baseCurrency;
 
 
 @end

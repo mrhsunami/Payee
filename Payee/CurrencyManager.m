@@ -7,14 +7,33 @@
 //
 
 #import "CurrencyManager.h"
+#import <Realm/Realm.h>
+#import "ConversionRate.h"
 
 @interface CurrencyManager ()
+
+@property (nonatomic) NSString *baseCurrency;
 
 @property (nonatomic) NSURL *currencyAPIURL;
 
 @end
 
 @implementation CurrencyManager
+
++(double)convert: (float)foreignValue
+            from: (NSString*)foreignCurrency
+              to: (NSString*)baseCurrency
+{
+  RLMRealm *realm = [RLMRealm defaultRealm];
+  NSPredicate *base = [NSPredicate predicateWithFormat:@"currency == %@",baseCurrency];
+  NSPredicate *foreign = [NSPredicate predicateWithFormat:@"currency == %@",foreignCurrency];
+  RLMResults *baseResults = [ConversionRate objectsWithPredicate:(base)];
+  RLMResults *foreignResults = [ConversionRate objectsWithPredicate:(foreign)];
+  ConversionRate *baseCurrencyObject = [baseResults firstObject]; //eventually should return most recent object with matching currency
+  ConversionRate *foreignCurrencyObject = [foreignResults firstObject];//eventually should return most recent object with matching currency
+  double conversionFactor = baseCurrencyObject.USDConversion / foreignCurrencyObject.USDConversion;
+  return conversionFactor * foreignValue;
+}
 
 -(void)getExchangeRates
 {
@@ -30,7 +49,6 @@
       }];
   
   [getExchangeRatesTask resume]
-  print(
   ;
 }
 
@@ -49,20 +67,40 @@
   {
     dispatch_async(dispatch_get_main_queue(),
      ^{
-       _currenciesList = (NSDictionary *)jsonObject;
+
+       NSDictionary * downloadedDictionary = (NSDictionary *)jsonObject;
+       NSDictionary * currencyConversions = downloadedDictionary[@"quotes"];
+       RLMRealm *realm = [RLMRealm defaultRealm];
+       [realm beginWriteTransaction];
+       for(id key in currencyConversions)
+       {
+         NSString *currencyRaw = (NSString*)key;
+         NSNumber *conversion = (NSNumber*)currencyConversions[currencyRaw];
+         NSString *currency = [currencyRaw substringFromIndex:3];
+         double conversionValue = [conversion doubleValue];
+         [[ConversionRate alloc]initWithString:currency andConversionRate:conversionValue];
+          }
+       [realm commitWriteTransaction];
      });
-    return;
+      return;
   }
 }
 
--(instancetype)init
+-(instancetype)initWithBaseCurrency: (NSString*)baseCurrency
 {
   self = [super init];
   if(self)
   {
     _currencyAPIURL = [NSURL URLWithString:@"https://www.apilayer.net/api/live?access_key=af1a59d17cc5ca3c64913ea15beba024"];
+    _baseCurrency = baseCurrency;
     [self getExchangeRates];
   }
+  return self;
+}
+
+-(instancetype)init
+{
+  self = [self initWithBaseCurrency:@"CAD"];
   return self;
 }
 
