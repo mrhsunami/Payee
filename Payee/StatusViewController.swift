@@ -8,8 +8,6 @@
 
 import UIKit
 
-//var buddiesArray : [String] = []
-//var netAmountArray : [Float] = [30.00, 60.00, 90.00]
 var infoForRows: [NSArray] = []
 
 
@@ -34,6 +32,7 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.statusTableView.dataSource = self
@@ -41,6 +40,8 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.statusTableView.dataSource = self
         loadDataForView()
     }
 
@@ -50,10 +51,10 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let statusTableViewCell : StatusTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StatusTableViewCell
-        //    statusTableViewCell.buddyNameLabel.text = buddiesArray[indexPath.row]
-        //    statusTableViewCell.netAmountLabel.text = "$" +  String(netAmountArray[indexPath.row])
+        
         statusTableViewCell.buddyNameLabel.text = infoForRows[indexPath.row][0] as? String
-        statusTableViewCell.netAmountLabel.text = infoForRows[indexPath.row][3] as? String
+        statusTableViewCell.netAmountLabel.text = String(format:"%.02f", (infoForRows[indexPath.row][3] as! Float) )
+        
         return statusTableViewCell
     }
 
@@ -79,6 +80,8 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
                 vc?.otherBuddiesArray = otherBuddieString
 
                 vc?.buddyNetAmount = String(describing: infoForRows[indexPath.row][3])  //selected buddy net amount
+                vc?.buddyTab = String(describing: infoForRows[indexPath.row][1])
+                vc?.buddyPaid = String(describing: infoForRows[indexPath.row][2])
             }
         }
     }

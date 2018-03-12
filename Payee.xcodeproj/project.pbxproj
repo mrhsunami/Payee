@@ -20,6 +20,7 @@
 		95920E922055D67400CF8ED2 /* CurrencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95920E912055D67400CF8ED2 /* CurrencyManager.m */; };
 		95920E952055F26D00CF8ED2 /* ConversionRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95920E942055F26D00CF8ED2 /* ConversionRate.m */; };
 		95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B427D92050C67200BAC5F4 /* Buddy.m */; };
+		D8B8AD962056081B00FE9573 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8AD952056081B00FE9573 /* SettingsViewController.swift */; };
 		D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C20FCD2050BDC400486D7C /* AppDelegate.swift */; };
 		D8C20FD52050BDC400486D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD42050BDC400486D7C /* Assets.xcassets */; };
 		D8C20FD82050BDC400486D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C20FD62050BDC400486D7C /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		95B427D52050C67000BAC5F4 /* Payee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Payee-Bridging-Header.h"; sourceTree = "<group>"; };
 		95B427D92050C67200BAC5F4 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
 		95B427DB2050C67200BAC5F4 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
+		D8B8AD952056081B00FE9573 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8C20FCA2050BDC400486D7C /* Payee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C20FCD2050BDC400486D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C20FD42050BDC400486D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				2C4BCEE42054974500F9E30F /* StatusDetailViewController.swift */,
 				2CE88B7D2050FF7C004CC735 /* StatusTableViewCell.swift */,
 				2CE88B7F2050FF7C004CC735 /* Main.storyboard */,
+				D8B8AD952056081B00FE9573 /* SettingsViewController.swift */,
 				D8E62F402050F4A6009C8468 /* TripManager.swift */,
 				95920E902055D67400CF8ED2 /* CurrencyManager.h */,
 				95920E912055D67400CF8ED2 /* CurrencyManager.m */,
@@ -354,6 +357,7 @@
 				2CE88B832050FF7C004CC735 /* AddItemViewController.swift in Sources */,
 				95B427DE2050C67300BAC5F4 /* Buddy.m in Sources */,
 				D8C20FCE2050BDC400486D7C /* AppDelegate.swift in Sources */,
+				D8B8AD962056081B00FE9573 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
