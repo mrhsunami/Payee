@@ -77,6 +77,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
         dataProcessingDelegate?.createTransactionRecord(arrayOfbuddyNamesAndPortions: buddyAmountPortionArray, transactionName: transactionName, payerName: payerName, expenseAmount: expenseAmount)
         
         navigationController?.popViewController(animated: true)
+      
     }
     
     override func viewDidLoad() {
