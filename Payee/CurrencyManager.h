@@ -13,7 +13,7 @@
 
 @property (nonatomic) NSArray *ArrayOfCurrencies;
 
-+(double)convert: (float)foreignValue
++(float)convert: (float)foreignValue
               from: (NSString*)foreignCurrency
               to: (NSString*)baseCurrency;
 
