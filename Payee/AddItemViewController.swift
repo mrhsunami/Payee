@@ -53,6 +53,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         amountTextField.delegate = self
+        payerTextField.delegate = self
         nextButton.isEnabled = true
       
       //Get summary array

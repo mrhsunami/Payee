@@ -15,15 +15,21 @@ class StatusDetailViewController: UIViewController {
   @IBOutlet weak var totalTabAmountLabel: UILabel!
   @IBOutlet weak var totalPaidAmountLabel: UILabel!
   
-  var buddyName = ""
-  var buddyNetAmount = ""
-  var otherBuddiesArray : [String] = []
-  
+
+    var buddyName = ""
+    var buddyNetAmount = ""
+    var buddyTab = ""
+    var buddyPaid = ""
+    var otherBuddiesArray : [String] = []
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     //    populate the name of the buddy at the top and corresponding net amount
     buddyNameLabel.text = buddyName
     buddyNetAmountLabel.text = buddyNetAmount
+    totalTabAmountLabel.text = buddyTab
+    totalPaidAmountLabel.text = buddyPaid
+    
     
     //    populate the names of other buddies on the screen
 //    for (i, otherBuddy) in otherBuddiesArray.enumerated() {
