@@ -11,10 +11,20 @@ import UIKit
 
 class AddItemViewController: UIViewController, UITextFieldDelegate {
     
+    
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var payerTextField: UITextField!
     @IBOutlet weak var itemNameTextField: UITextField!
+    @IBOutlet weak var localCurrency: UILabel!
+    @IBAction func showCurrencies(_ sender: Any) {
+        
+    }
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        
+    }
+    
+
     
     let tripManager = TripManager.shared // this creates a singleton tripManager
   
@@ -22,6 +32,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     var itemName : String = ""
     var payer : String = ""
     var amount : String = ""
+    
     
     @objc fileprivate func retractKeyboard() {
         view.endEditing(true)
@@ -50,6 +61,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        localCurrency.text = tripManager.localCurrency
         let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         amountTextField.delegate = self
@@ -71,6 +83,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        localCurrency.text = tripManager.localCurrency
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.tintAdjustmentMode = .normal
 //        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
@@ -78,6 +91,14 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
+        if segue.identifier == "currencyListLocal" {
+            if segue.destination is CurrencyTableViewController {
+                let vc = segue.destination as? CurrencyTableViewController
+                vc?.seguedFrom = "expenseView"
+                
+            }
+        }
+        
       //    segue to item detail screen when clicking next
       if segue.identifier == "itemDetailSegue" {
             if segue.destination is ItemDetailViewController {

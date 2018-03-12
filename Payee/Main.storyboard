@@ -126,6 +126,23 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="213.33333333333334"/>
                                                 <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-OZ-ojF" userLabel="Current Currency">
+                                                <rect key="frame" x="40" y="30" width="138" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <state key="normal" title="Local Currency :">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showCurrencies:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vld-JF-25Y"/>
+                                                    <segue destination="EvN-I7-aET" kind="presentation" identifier="currencyListLocal" id="1ze-M0-chC"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jo5-GC-zyp" userLabel="Currency">
+                                                <rect key="frame" x="184" y="36" width="40.333333333333343" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-VU-NVa">
                                                 <rect key="frame" x="40" y="68.666666666666629" width="295" height="60"/>
                                                 <constraints>
@@ -150,9 +167,13 @@
                                             <constraint firstAttribute="bottom" secondItem="FPB-nY-Eo4" secondAttribute="bottom" constant="30" id="2ez-g8-J2X"/>
                                             <constraint firstItem="yal-gg-21Y" firstAttribute="top" secondItem="g9O-xu-Z0v" secondAttribute="top" id="Dor-Qa-vYR"/>
                                             <constraint firstItem="CcS-VU-NVa" firstAttribute="leading" secondItem="g9O-xu-Z0v" secondAttribute="leading" constant="40" id="F6Z-Hw-iEF"/>
+                                            <constraint firstItem="Jo5-GC-zyp" firstAttribute="leading" secondItem="xyl-OZ-ojF" secondAttribute="trailing" constant="6" id="I09-b4-cBl"/>
+                                            <constraint firstItem="xyl-OZ-ojF" firstAttribute="leading" secondItem="g9O-xu-Z0v" secondAttribute="leading" constant="40" id="Ki5-D7-SUl"/>
+                                            <constraint firstItem="Jo5-GC-zyp" firstAttribute="centerY" secondItem="xyl-OZ-ojF" secondAttribute="centerY" id="Ko3-bP-ajv"/>
                                             <constraint firstAttribute="trailing" secondItem="yal-gg-21Y" secondAttribute="trailing" id="QFM-CO-iFv"/>
                                             <constraint firstAttribute="trailing" secondItem="7Hq-AM-zBB" secondAttribute="trailing" id="UwY-yG-me2"/>
                                             <constraint firstAttribute="trailing" secondItem="CcS-VU-NVa" secondAttribute="trailing" constant="40" id="VBw-3w-x9K"/>
+                                            <constraint firstItem="xyl-OZ-ojF" firstAttribute="top" secondItem="g9O-xu-Z0v" secondAttribute="top" constant="30" id="Vu8-RG-uQw"/>
                                             <constraint firstAttribute="bottom" secondItem="7Hq-AM-zBB" secondAttribute="bottom" id="WnM-Ud-6YU"/>
                                             <constraint firstAttribute="trailing" secondItem="FPB-nY-Eo4" secondAttribute="trailing" constant="40" id="Wvy-uI-Wel"/>
                                             <constraint firstItem="7Hq-AM-zBB" firstAttribute="top" secondItem="g9O-xu-Z0v" secondAttribute="top" id="blx-qc-klO"/>
@@ -189,13 +210,14 @@
                     <connections>
                         <outlet property="amountTextField" destination="FPB-nY-Eo4" id="uhl-1C-q7x"/>
                         <outlet property="itemNameTextField" destination="Eyf-au-8tn" id="PC4-Nd-yqZ"/>
+                        <outlet property="localCurrency" destination="Jo5-GC-zyp" id="iQC-iM-xX9"/>
                         <outlet property="nextButton" destination="Sqz-rF-NOc" id="Hq4-j9-WnJ"/>
                         <outlet property="payerTextField" destination="Z49-fO-cUD" id="ZOU-bB-vyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522" y="-321"/>
+            <point key="canvasLocation" x="1520.8" y="-321.42857142857144"/>
         </scene>
         <!--Split Details-->
         <scene sceneID="3VM-5k-UJT">
@@ -552,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="545"/>
+            <point key="canvasLocation" x="1521" y="429"/>
         </scene>
         <!--Status Detail View Controller-->
         <scene sceneID="8m2-Sh-drb">
@@ -576,25 +598,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrD-Wz-1XE">
-                                <rect key="frame" x="17.666666666666657" y="355" width="340" height="102"/>
+                                <rect key="frame" x="17.666666666666657" y="331" width="340" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jfd-Sw-wh1" userLabel="Total Label Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="102"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="150"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytc-6U-Iuq" userLabel="Current Currency">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <state key="normal" title="Home Currency :">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeHomeCurrency:" destination="2eD-oT-RtY" eventType="touchUpInside" id="Xh7-zV-dr8"/>
+                                                    <segue destination="EvN-I7-aET" kind="presentation" identifier="fromDetailsView" id="Q8M-dj-W0X"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-Ez-QjD">
-                                                <rect key="frame" x="0.0" y="0.0" width="210" height="30"/>
+                                                <rect key="frame" x="0.0" y="48" width="210" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-H2-Ngb">
-                                                <rect key="frame" x="0.0" y="36" width="210" height="30"/>
+                                                <rect key="frame" x="0.0" y="84" width="210" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8X-py-63N">
-                                                <rect key="frame" x="0.0" y="72" width="210" height="30"/>
+                                                <rect key="frame" x="0.0" y="120" width="210" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -609,10 +642,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SYp-bT-zTi" userLabel="Amounts Stack View">
-                                        <rect key="frame" x="210" y="0.0" width="130" height="102"/>
+                                        <rect key="frame" x="210" y="0.0" width="130" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-Re-F9q">
-                                                <rect key="frame" x="10" y="0.0" width="120" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CAD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xij-dY-u7R" userLabel="Currency">
+                                                <rect key="frame" x="80.000000000000028" y="0.0" width="50" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-Re-F9q">
+                                                <rect key="frame" x="10" y="48" width="120" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="1M2-4K-I7A"/>
                                                 </constraints>
@@ -620,8 +659,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-kW-Jl0">
-                                                <rect key="frame" x="10" y="36" width="120" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-kW-Jl0">
+                                                <rect key="frame" x="10" y="84" width="120" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Ws6-5O-8rL"/>
                                                 </constraints>
@@ -629,8 +668,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu1-hh-ZCZ">
-                                                <rect key="frame" x="10" y="72" width="120" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu1-hh-ZCZ">
+                                                <rect key="frame" x="10" y="120" width="120" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="CcD-EF-HCl"/>
                                                 </constraints>
@@ -669,13 +708,14 @@
                     <connections>
                         <outlet property="buddyNameLabel" destination="hhV-ZM-gad" id="QPa-qa-Qt0"/>
                         <outlet property="buddyNetAmountLabel" destination="Qu1-hh-ZCZ" id="kiI-fc-wdH"/>
+                        <outlet property="homeCurrency" destination="Xij-dY-u7R" id="Dsh-Q6-yNP"/>
                         <outlet property="totalPaidAmountLabel" destination="VrN-kW-Jl0" id="tjr-kh-7HW"/>
                         <outlet property="totalTabAmountLabel" destination="0bZ-Re-F9q" id="lA7-cx-w3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZz-dd-D1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553" y="545"/>
+            <point key="canvasLocation" x="2553" y="429"/>
         </scene>
         <!--Settings-->
         <scene sceneID="1jD-TD-UZd">
@@ -685,28 +725,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJX-nD-yTa">
-                                <rect key="frame" x="119" y="385" width="136" height="42"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                <state key="normal" title="Clear all data">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearDataButton:" destination="2eD-oT-RtY" eventType="touchUpInside" id="UlH-8x-fJ5"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-zp-r7Z">
+                                <rect key="frame" x="40.000000000000014" y="547" width="189.33333333333337" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJX-nD-yTa">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <state key="normal" title="Clear all data">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearDataButton:" destination="2eD-oT-RtY" eventType="touchUpInside" id="UlH-8x-fJ5"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-nL-pri">
+                                        <rect key="frame" x="0.0" y="66" width="189.33333333333334" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-cO-AWg" userLabel="Current Currency">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <state key="normal" title="Home Currency :">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeHomeCurrency:" destination="2eD-oT-RtY" eventType="touchUpInside" id="ogM-z7-xZ4"/>
+                                                    <segue destination="EvN-I7-aET" kind="presentation" identifier="currencyListHome" id="gzg-Ks-HTN"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQJ-rm-3ge" userLabel="Currency">
+                                                <rect key="frame" x="149" y="0.0" width="40.333333333333343" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="wJX-nD-yTa" firstAttribute="centerX" secondItem="ZdD-2d-d9R" secondAttribute="centerX" id="RIM-DI-VT2"/>
-                            <constraint firstItem="wJX-nD-yTa" firstAttribute="centerY" secondItem="ZdD-2d-d9R" secondAttribute="centerY" id="rzA-uy-cZK"/>
+                            <constraint firstItem="sOV-zp-r7Z" firstAttribute="leading" secondItem="yPo-pd-3kg" secondAttribute="leading" constant="40" id="GjX-QB-X77"/>
+                            <constraint firstItem="yPo-pd-3kg" firstAttribute="bottom" secondItem="sOV-zp-r7Z" secondAttribute="bottom" constant="80" id="aAZ-pA-nyR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yPo-pd-3kg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings-icon" id="5of-Lq-tZh"/>
+                    <navigationItem key="navigationItem" title="Settings" id="77h-6z-nvL"/>
+                    <connections>
+                        <outlet property="currentHomeCurrency" destination="CQJ-rm-3ge" id="PVi-wv-Pfg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8F-3R-7AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="545"/>
+            <point key="canvasLocation" x="1521" y="-1015"/>
+        </scene>
+        <!--Currency Table View Controller-->
+        <scene sceneID="mNu-SN-eLY">
+            <objects>
+                <tableViewController id="EvN-I7-aET" customClass="CurrencyTableViewController" customModule="Payee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gvl-aF-NDU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="currencyCell" textLabel="Eya-dm-PGD" style="IBUITableViewCellStyleDefault" id="OIU-yz-osh" customClass="CurrencyTableViewCell" customModule="Payee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIU-yz-osh" id="qC7-E8-Z9z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eya-dm-PGD">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="currencyLabel" destination="Eya-dm-PGD" id="0nE-6t-wCw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EvN-I7-aET" id="zqf-NV-hDO"/>
+                            <outlet property="delegate" destination="EvN-I7-aET" id="lb5-KF-3Mg"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="1dD-Xo-jyx" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="ses-vq-gtB"/>
+                        <segue destination="1dD-Xo-jyx" kind="unwind" identifier="unwindToSettings" unwindAction="unwindToSettingsWithSegue:" id="gRu-1u-XsS"/>
+                        <segue destination="1dD-Xo-jyx" kind="unwind" identifier="unwindToDetails" unwindAction="unwindToDetailsWithSegue:" id="pEQ-Dw-fd6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEo-fW-VpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1dD-Xo-jyx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="-1015"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -721,7 +838,7 @@
                     <connections>
                         <segue destination="vg0-ft-Gkx" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Adj-N4-7hL" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="2eD-oT-RtY" kind="relationship" relationship="viewControllers" id="37z-XQ-Udh"/>
+                        <segue destination="BVp-KD-ntZ" kind="relationship" relationship="viewControllers" id="37z-XQ-Udh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -778,7 +895,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9Z-e9-QBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="546"/>
+            <point key="canvasLocation" x="542" y="430"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="W1D-Rl-0vw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BVp-KD-ntZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-icon" id="5of-Lq-tZh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="k7n-Uv-M7s">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2eD-oT-RtY" kind="relationship" relationship="rootViewController" id="Dqq-2i-7xc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRO-0r-MvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540.79999999999995" y="-1015.2709359605911"/>
         </scene>
     </scenes>
     <resources>
@@ -792,4 +928,7 @@
         <image name="tally-icon" width="30" height="30"/>
         <image name="wisconsin" width="1672" height="1080"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gzg-Ks-HTN"/>
+    </inferredMetricsTieBreakers>
 </document>

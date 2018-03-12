@@ -37,12 +37,14 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         self.statusTableView.dataSource = self
         loadDataForView()
+        self.statusTableView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.statusTableView.dataSource = self
         loadDataForView()
+        self.statusTableView.reloadData()
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +53,7 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let statusTableViewCell : StatusTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StatusTableViewCell
-        
+        loadDataForView()
         statusTableViewCell.buddyNameLabel.text = infoForRows[indexPath.row][0] as? String
         statusTableViewCell.netAmountLabel.text = String(format:"%.02f", (infoForRows[indexPath.row][3] as! Float) )
         
@@ -79,9 +81,9 @@ class StatusViewController: UIViewController, UITableViewDataSource, UITableView
                 let otherBuddieString = infoForRows.map { $0[0] } as! [String]
                 vc?.otherBuddiesArray = otherBuddieString
 
-                vc?.buddyNetAmount = String(describing: infoForRows[indexPath.row][3])  //selected buddy net amount
-                vc?.buddyTab = String(describing: infoForRows[indexPath.row][1])
-                vc?.buddyPaid = String(describing: infoForRows[indexPath.row][2])
+                vc?.buddyNetAmount = String(format:"%.02f", (infoForRows[indexPath.row][3] as! Float) )// String(describing: infoForRows[indexPath.row][3])  //selected buddy net amount
+                vc?.buddyTab = String(format:"%.02f", (infoForRows[indexPath.row][1] as! Float) ) // String(describing: infoForRows[indexPath.row][1])
+                vc?.buddyPaid = String(format:"%.02f", (infoForRows[indexPath.row][2] as! Float) )// String(describing: infoForRows[indexPath.row][2])
             }
         }
     }
