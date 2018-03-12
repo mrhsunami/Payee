@@ -21,6 +21,9 @@
     _USDConversion = USDConversionRate;
     _date = [NSDate date];
     RLMRealm *realm = [RLMRealm defaultRealm];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"currency == %@",currenciesConverted];
+    RLMResults *results = [ConversionRate objectsWithPredicate:predicate];
+    [realm deleteObjects:results];
     [realm addObject:self];
   }
   return self;
