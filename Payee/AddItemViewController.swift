@@ -16,7 +16,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var payerTextField: UITextField!
     @IBOutlet weak var itemNameTextField: UITextField!
     
-    let tripManager = TripManager.shared
+    let tripManager = TripManager.shared // this creates a singleton tripManager
   
   //  variables that needs to be passed to item detail screen
     var itemName : String = ""
@@ -101,6 +101,12 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
                 vc?.amount = self.amount
                 vc?.itemName = self.itemName
                 vc?.dataProcessingDelegate = self.tripManager
+              
+//              clear text fields
+                itemNameTextField.text = ""
+                payerTextField.text = ""
+                amountTextField.text = ""
+
             }
         }
     }
