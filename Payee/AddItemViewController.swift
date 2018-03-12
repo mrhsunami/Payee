@@ -59,10 +59,14 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
       let summaryTest: Array = LedgerLine.settleUpSummary(for: tripManager.activeTrip)
        print(summaryTest)
       //Get exchange rates
+
       
       let _: CurrencyManager = CurrencyManager.init()
       let testCurrency: Double = CurrencyManager.convert(3.00, from: "USD", to: "CAD")
       print("$3 USD is \(testCurrency) CAD")
+      //Delete Ledgers
+      LedgerLine.clearLedger()
+      
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -51,9 +51,11 @@
 +(void)clearLedger
 {
   RLMRealm *realm = [RLMRealm defaultRealm];
-  [realm beginWriteTransaction];
-  [realm deleteAllObjects];
-  [realm commitWriteTransaction];
+
+  RLMResults *ledgers = [LedgerLine allObjects];
+    [realm beginWriteTransaction];
+  [realm deleteObjects:ledgers];
+     [realm commitWriteTransaction];
 }
 
 -(instancetype)initWithTrip: (Trip*)trip
