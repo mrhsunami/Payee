@@ -96,6 +96,12 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
                 vc?.amount = self.amount
                 vc?.itemName = self.itemName
                 vc?.dataProcessingDelegate = self.tripManager
+              
+//              clear text fields
+                itemNameTextField.text = ""
+                payerTextField.text = ""
+                amountTextField.text = ""
+
             }
         }
     }
