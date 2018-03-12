@@ -9,14 +9,14 @@
 import UIKit
 
 protocol CanCreateTransactionDelegate {
-
+    
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> ()
 }
 
 class ItemDetailViewController: UIViewController, UITextFieldDelegate {
     
-  @IBOutlet weak var saveButton: UIBarButtonItem!
-  @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var payerLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var buddy1NameTextField: UITextField!
@@ -25,8 +25,8 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buddy2AmountPortionTextField: UITextField!
     @IBOutlet weak var buddy3NameTextField: UITextField!
     @IBOutlet weak var buddy3AmountPortionTextField: UITextField!
-  
-  //  variables passed from add item screen
+    
+    //  variables passed from add item screen
     var itemName = ""
     var payer = ""
     var amount = ""
@@ -56,16 +56,16 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
   }
 
     
-    @IBAction func doneButtonTouched(_ sender: Any) {
+    @IBAction func saveButtonTouched(_ sender: Any) {
         print("done button tapped")
-      
-      //    store each buddy's name and corresponding portion of the amount paid by the payer in a tuple
+        
+        //    store each buddy's name and corresponding portion of the amount paid by the payer in a tuple
         let buddyAmountPortionTuple1 = (buddy1NameTextField.text, (buddy1AmountPortionTextField.text! as NSString).floatValue)
         let buddyAmountPortionTuple2 = (buddy2NameTextField.text, (buddy2AmountPortionTextField.text! as NSString).floatValue)
         let buddyAmountPortionTuple3 = (buddy3NameTextField.text, (buddy3AmountPortionTextField.text! as NSString).floatValue)
-      
-      //    store the tuples in an array
-      var buddyAmountPortionArray : [(name: String, amountPortion: Float)] = []
+        
+        //    store the tuples in an array
+        var buddyAmountPortionArray : [(name: String, amountPortion: Float)] = []
         buddyAmountPortionArray.append(buddyAmountPortionTuple1 as! (name: String, amountPortion: Float))
         buddyAmountPortionArray.append(buddyAmountPortionTuple2 as! (name: String, amountPortion: Float))
         buddyAmountPortionArray.append(buddyAmountPortionTuple3 as! (name: String, amountPortion: Float))
@@ -82,6 +82,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
       let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
       self.view.addGestureRecognizer(tapToCloseKeyboard)
       
@@ -93,6 +94,12 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
       buddy3AmountPortionTextField.delegate = self
 
       //    populate the variables passed from add item screen
+=======
+        let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
+        self.view.addGestureRecognizer(tapToCloseKeyboard)
+        
+        //    populate the variables passed from add item screen
+>>>>>>> master
         itemNameLabel.text = itemName
         payerLabel.text = payer
         amountLabel.text = amount

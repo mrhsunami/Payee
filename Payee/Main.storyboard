@@ -449,7 +449,7 @@
                     <navigationItem key="navigationItem" title="Split Details" id="e01-IU-xvz">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="z67-4W-8e7">
                             <connections>
-                                <action selector="doneButtonTouched:" destination="5YH-By-2Qz" id="PCS-bL-bkd"/>
+                                <action selector="saveButtonTouched:" destination="5YH-By-2Qz" id="PCS-bL-bkd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -554,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="358.37438423645324"/>
+            <point key="canvasLocation" x="1602.8985507246377" y="357.88043478260875"/>
         </scene>
         <!--Status Detail View Controller-->
         <scene sceneID="8m2-Sh-drb">
