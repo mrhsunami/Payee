@@ -7,5 +7,7 @@
 #import "Trip.h"
 #import "Meal.h"
 #import "LedgerLine.h"
+#import "CurrencyManager.h"
+#import "ConversionRate.h"
 
 
