@@ -59,6 +59,15 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
       //Get summary array
       let summaryTest: Array = LedgerLine.settleUpSummary(for: tripManager.activeTrip)
        print(summaryTest)
+      //Get exchange rates
+
+      
+      let _: CurrencyManager = CurrencyManager.init()
+      let testCurrency: Double = CurrencyManager.convert(3.00, from: "USD", to: "CAD")
+      print("$3 USD is \(testCurrency) CAD")
+      //Delete Ledgers
+      //LedgerLine.clearLedger()
+      
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -97,6 +106,12 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
                 vc?.amount = self.amount
                 vc?.itemName = self.itemName
                 vc?.dataProcessingDelegate = self.tripManager
+              
+//              clear text fields
+                itemNameTextField.text = ""
+                payerTextField.text = ""
+                amountTextField.text = ""
+
             }
         }
     }
