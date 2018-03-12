@@ -82,7 +82,6 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-<<<<<<< HEAD
       let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
       self.view.addGestureRecognizer(tapToCloseKeyboard)
       
@@ -93,13 +92,11 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate {
       buddy2AmountPortionTextField.delegate = self
       buddy3AmountPortionTextField.delegate = self
 
-      //    populate the variables passed from add item screen
-=======
-        let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
-        self.view.addGestureRecognizer(tapToCloseKeyboard)
-        
+//      //    populate the variables passed from add item screen
+//        let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
+//        self.view.addGestureRecognizer(tapToCloseKeyboard)
+      
         //    populate the variables passed from add item screen
->>>>>>> master
         itemNameLabel.text = itemName
         payerLabel.text = payer
         amountLabel.text = amount
