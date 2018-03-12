@@ -13,7 +13,7 @@
 @interface CurrencyManager ()
 
 @property (nonatomic) NSString *baseCurrency;
-
+@property (nonatomic) NSArray *ArrayOfCurrencies;
 @property (nonatomic) NSURL *currencyAPIURL;
 
 @end
@@ -79,6 +79,8 @@
          NSString *currency = [currencyRaw substringFromIndex:3];
          double conversionValue = [conversion doubleValue];
          [[ConversionRate alloc]initWithString:currency andConversionRate:conversionValue];
+         self.ArrayOfCurrencies = [currencyConversions allKeys];
+         
           }
        [realm commitWriteTransaction];
      });
