@@ -14,7 +14,11 @@ class StatusDetailViewController: UIViewController {
   @IBOutlet weak var buddyNetAmountLabel: UILabel!
   @IBOutlet weak var totalTabAmountLabel: UILabel!
   @IBOutlet weak var totalPaidAmountLabel: UILabel!
-  
+    @IBOutlet weak var homeCurrency: UILabel!
+   
+    @IBAction func unwindToDetails(segue: UIStoryboardSegue) {
+        
+    }
 
     var buddyName = ""
     var buddyNetAmount = ""
@@ -22,13 +26,36 @@ class StatusDetailViewController: UIViewController {
     var buddyPaid = ""
     var otherBuddiesArray : [String] = []
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    //    populate the name of the buddy at the top and corresponding net amount
-    buddyNameLabel.text = buddyName
-    buddyNetAmountLabel.text = buddyNetAmount
-    totalTabAmountLabel.text = buddyTab
-    totalPaidAmountLabel.text = buddyPaid
+    func updateViews() {
+        buddyNameLabel.text = buddyName
+        buddyNetAmountLabel.text = buddyNetAmount
+        totalTabAmountLabel.text = buddyTab
+        totalPaidAmountLabel.text = buddyPaid
+        homeCurrency.text = TripManager.shared.myCurrency
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateViews()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "fromDetailsView" {
+            if segue.destination is CurrencyTableViewController {
+                let vc = segue.destination as? CurrencyTableViewController
+                vc?.seguedFrom = "detailsView"
+            }
+        }
+    }
     
     
     //    populate the names of other buddies on the screen
@@ -46,7 +73,7 @@ class StatusDetailViewController: UIViewController {
 //      }
 //    }
     // Do any additional setup after loading the view.
-  }
+  
   
   //    override func didReceiveMemoryWarning() {
   //        super.didReceiveMemoryWarning()
