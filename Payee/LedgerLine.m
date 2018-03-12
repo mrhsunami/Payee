@@ -53,8 +53,12 @@
   RLMRealm *realm = [RLMRealm defaultRealm];
 
   RLMResults *ledgers = [LedgerLine allObjects];
+  RLMResults *meals = [Meal allObjects];
+  RLMResults *buddies = [Buddy allObjects];
     [realm beginWriteTransaction];
   [realm deleteObjects:ledgers];
+    [realm deleteObjects:meals];
+    [realm deleteObjects:buddies];
      [realm commitWriteTransaction];
 }
 
