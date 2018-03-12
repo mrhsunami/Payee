@@ -13,7 +13,7 @@ protocol CanCreateTransactionDelegate {
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> ()
 }
 
-class ItemDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var itemNameLabel: UILabel!
@@ -32,9 +32,29 @@ class ItemDetailViewController: UIViewController {
     var amount = ""
     var dataProcessingDelegate: CanCreateTransactionDelegate? = nil
     
-    @objc fileprivate func retractKeyboard() {
-        view.endEditing(true)
-    }
+  @objc fileprivate func retractKeyboard() {
+    view.endEditing(true)
+  }
+  
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    moveTextField(textField: textField, moveDistance: -250, up: true)
+  }
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    moveTextField(textField: textField, moveDistance: -250, up: false)
+  }
+  
+  func moveTextField(textField: UITextField, moveDistance: Int, up: Bool) {
+    let moveDuration = 0.3
+    let movement = CGFloat(up ? moveDistance : -moveDistance)
+    
+    UIView.beginAnimations("animateTextField", context: nil)
+    UIView.setAnimationBeginsFromCurrentState(true)
+    UIView.setAnimationDuration(moveDuration)
+    
+    self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+    UIView.commitAnimations()
+  }
+
     
     @IBAction func saveButtonTouched(_ sender: Any) {
         print("done button tapped")
@@ -59,20 +79,30 @@ class ItemDetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        //    doneButton.isEnabled = false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
+      let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
+      self.view.addGestureRecognizer(tapToCloseKeyboard)
+      
+      buddy1NameTextField.delegate = self
+      buddy2NameTextField.delegate = self
+      buddy3NameTextField.delegate = self
+      buddy1AmountPortionTextField.delegate = self
+      buddy2AmountPortionTextField.delegate = self
+      buddy3AmountPortionTextField.delegate = self
+
+      //    populate the variables passed from add item screen
+=======
         let tapToCloseKeyboard = UITapGestureRecognizer(target: self, action: #selector(retractKeyboard))
         self.view.addGestureRecognizer(tapToCloseKeyboard)
         
         //    populate the variables passed from add item screen
+>>>>>>> master
         itemNameLabel.text = itemName
         payerLabel.text = payer
-        amountLabel.text = "$" + amount
+        amountLabel.text = amount
     }
     
     override func didReceiveMemoryWarning() {
