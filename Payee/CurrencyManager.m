@@ -12,8 +12,8 @@
 
 @interface CurrencyManager ()
 
-@property (nonatomic) NSString *baseCurrency;
-@property (nonatomic) NSArray *ArrayOfCurrencies;
+//@property (nonatomic) NSString *baseCurrency;
+
 @property (nonatomic) NSURL *currencyAPIURL;
 
 @end
@@ -94,7 +94,7 @@
   if(self)
   {
     _currencyAPIURL = [NSURL URLWithString:@"https://www.apilayer.net/api/live?access_key=af1a59d17cc5ca3c64913ea15beba024"];
-    _baseCurrency = baseCurrency;
+    //_baseCurrency = baseCurrency;
     [self getExchangeRates];
   }
   return self;

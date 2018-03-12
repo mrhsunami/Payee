@@ -11,7 +11,7 @@
 
 @interface CurrencyManager : NSObject
 
-
+@property (nonatomic) NSArray *ArrayOfCurrencies;
 
 +(double)convert: (float)foreignValue
               from: (NSString*)foreignCurrency

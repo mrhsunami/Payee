@@ -12,6 +12,7 @@ class TripManager: CanCreateTransactionDelegate {
     
     static let shared = TripManager()
     let activeTrip: Trip = Trip.lastAccessedTripOrInitNewInDatabase()
+  var myCurrency: String = "CAD"
     
     func createTransactionRecord(arrayOfbuddyNamesAndPortions: [(String,Float)], transactionName: String, payerName: String, expenseAmount: Float) -> Void {
         
